@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Project 14: Shopping list</title>
+  </head>
+  <body>
+    <div class="list-app">
+      <div class="detail-products-container">
+        <div class="product-container">
+          <!-- Hinh anh san pham -->
+          <div class="product-img-container">
+            <img src="./imgs/model_1.jpg" alt="" class="product-img" />
+          </div>
+          <div class="product-controller">
+            <button class="del-btn"><i class="bi bi-x"></i></button>
+            <h1 class="product-name">Ao 1</h1>
+            <div class="sum-controller">
+              <div class="quantity-controller">
+                <button class="quantity-btn dec">
+                  <i class="bi bi-dash"></i>
+                </button>
+                <p class="quantity-display">1</p>
+                <button class="quantity-btn ins">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+              <!-- Thanh tien -->
+              <div class="money-display-container">
+                <p class="money-display">$12.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <!-- Hinh anh san pham -->
+          <div class="product-img-container">
+            <img src="./imgs/model_2.jpg" alt="" class="product-img" />
+          </div>
+          <div class="product-controller">
+            <button class="del-btn"><i class="bi bi-x"></i></button>
+            <h1 class="product-name">Ao 2</h1>
+            <div class="sum-controller">
+              <div class="quantity-controller">
+                <button class="quantity-btn dec">
+                  <i class="bi bi-dash"></i>
+                </button>
+                <p class="quantity-display">1</p>
+                <button class="quantity-btn ins">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+              <!-- Thanh tien -->
+              <div class="money-display-container">
+                <p class="money-display">$12.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <!-- Hinh anh san pham -->
+          <div class="product-img-container">
+            <img src="./imgs/model_3.jpg" alt="" class="product-img" />
+          </div>
+          <div class="product-controller">
+            <button class="del-btn"><i class="bi bi-x"></i></button>
+            <h1 class="product-name">Ao 3</h1>
+            <div class="sum-controller">
+              <div class="quantity-controller">
+                <button class="quantity-btn dec">
+                  <i class="bi bi-dash"></i>
+                </button>
+                <p class="quantity-display">1</p>
+                <button class="quantity-btn ins">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+              <!-- Thanh tien -->
+              <div class="money-display-container">
+                <p class="money-display">$12.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-container">
+          <!-- Hinh anh san pham -->
+          <div class="product-img-container">
+            <img src="./imgs/model_4.jpg" alt="" class="product-img" />
+          </div>
+          <div class="product-controller">
+            <button class="del-btn"><i class="bi bi-x"></i></button>
+            <h1 class="product-name">Ao 4</h1>
+            <div class="sum-controller">
+              <div class="quantity-controller">
+                <button class="quantity-btn dec">
+                  <i class="bi bi-dash"></i>
+                </button>
+                <p class="quantity-display">1</p>
+                <button class="quantity-btn ins">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+              <!-- Thanh tien -->
+              <div class="money-display-container">
+                <p class="money-display">$12.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pay-bills-container">
+        <div class="order-summary-container">
+          <h1 class="summary-title">Order Summary</h1>
+          <div class="info-summary">
+            <p class="info-title">Subtotal</p>
+            <p class="info-total-paid">$85.96</p>
+          </div>
+          <div class="info-summary">
+            <p class="info-title">Tax</p>
+            <p class="info-total-paid">$6.88</p>
+          </div>
+          <div class="info-summary">
+            <p class="info-title">Shipping</p>
+            <p class="info-total-paid">$0.00</p>
+          </div>
+          <hr class="line" />
+          <div class="total-display">
+            <div class="total-desc-container">
+              <h1 class="total-title">Total</h1>
+              <p class="total-bill"></p>
+            </div>
+            <button class="pay-btn">Pay now</button>
+          </div>
+        </div>
+        <div class="promo-container">
+          <h1 class="promo-title">Promo code</h1>
+          <input type="text" class="promo-input" placeholder="promo code" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 89: Voice Call</title>
+  </head>
+  <body>
+    <div class="calling-popup-container">
+      <div class="bg-img">
+        <div class="blur-modal"></div>
+      </div>
+      <div class="content-container">
+        <p class="connect-desc">In call with</p>
+        <h1 class="contact-name">New York City</h1>
+        <p class="calling-time">04:03</p>
+        <!-- avatar -->
+        <div class="avt-container">
+          <img src="./imgs/model_2.jpg" alt="" class="avt" />
+        </div>
+        <!-- Buttons -->
+        <div class="btns-group">
+          <button class="edit-btn"><i class="bi bi-volume-up"></i></button>
+          <button class="edit-btn"><i class="bi bi-mic"></i></button>
+          <button class="edit-btn"><i class="bi bi-camera-video"></i></button>
+          <button class="edit-btn"><i class="bi bi-grid-3x3-gap"></i></button>
+        </div>
+
+        <!-- Decline -->
+        <div class="decline-container">
+          <button class="decline-btn"><i class="bi bi-telephone-x"></i></button>
+          <p class="decline-desc">Slide to decline</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

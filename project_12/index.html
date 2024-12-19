@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 12: Booking</title>
+  </head>
+  <body>
+    <div class="reserve-card">
+      <div class="sliders">
+        <div class="img-container">
+          <img class="slide-img" src="./imgs/img_1.jpg" alt="hinh 1" />
+        </div>
+
+        <div class="img-container">
+          <img class="slide-img" src="./imgs/img_2.jpg" alt="hinh 1" />
+        </div>
+
+        <div class="img-container">
+          <img class="slide-img" src="./imgs/img_3.jpg" alt="hinh 1" />
+        </div>
+
+        <div class="move-btns-group">
+          <button class="move-btn"></button>
+          <button class="move-btn"></button>
+          <button class="move-btn"></button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="res-information">
+          <h1 class="res-name">Haidilao</h1>
+          <p class="res-address">2 Hải Triều, Bến Nghé, Quận 1</p>
+          <div class="rating">
+            <div class="star"><i class="bi bi-star-fill"></i></div>
+            <div class="star"><i class="bi bi-star-fill"></i></div>
+            <div class="star"><i class="bi bi-star-fill"></i></div>
+            <div class="star"><i class="bi bi-star-fill"></i></div>
+            <div class="star"><i class="bi bi-star"></i></div>
+            <div class="total-rating"><p class="total">(231 Reviews)</p></div>
+          </div>
+          <button class="fav-btn"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="res-description">
+          <p class="description">
+            Nhắc tới nhà hàng lẩu Haidilao người ta nghĩ ngay tới niềm đam mê
+            không lối về của chủ thương hiệu nhà hàng này. Món lẩu Haidilao có
+            nguồn gốc từ Trung Hoa từ 1994, nơi mà nhiều món lẩu trên thế giới
+            xuất phát từ đây. Đến với Haidilao, khách hàng sẽ được nghe câu
+            chuyện về một nhà hàng nhỏ nhắn, xinh xắn tại TP Hồ Chí Minh, phát
+            triển trên nền tảng món ăn Trung Quốc.
+          </p>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="book-btn">Make a reservation</button>
+      </div>
+    </div>
+
+    <script>
+      // Heart fill
+      const favButtons = document.querySelectorAll(".fav-btn");
+
+      favButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const icon = button.querySelector("i");
+          if (icon.classList.contains("bi-heart")) {
+            icon.classList.remove("bi-heart");
+            icon.classList.add("bi-heart-fill");
+          } else {
+            icon.classList.remove("bi-heart-fill");
+            icon.classList.add("bi-heart");
+          }
+        });
+      });
+
+      // Sliders
+      const sliders = document.querySelectorAll(".img-container");
+      const moveButtons = document.querySelectorAll(".move-btn");
+      let currentIndex = 0;
+      const totalSlides = sliders.length;
+      const autoSlideInterval = 3000;
+
+      // Hàm hiển thị slide
+      function showSlide(index) {
+        // Ẩn tất cả slide
+        sliders.forEach((slide, i) => {
+          slide.style.display = i === index ? "block" : "none";
+        });
+
+        // Cập nhật trạng thái nút
+        moveButtons.forEach((btn, i) => {
+          btn.style.backgroundColor = i === index ? "#333" : "#fff";
+        });
+      }
+
+      // Xử lý sự kiện click cho nút điều hướng
+      moveButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          currentIndex = index;
+          showSlide(currentIndex);
+        });
+      });
+
+      // Tự động chuyển slide
+      function autoSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      // Khởi động slider
+      showSlide(currentIndex); // Hiển thị slide đầu tiên
+      let slideInterval = setInterval(autoSlide, autoSlideInterval);
+
+      // Dừng tự động chuyển khi người dùng tương tác
+      sliders.forEach((slider) => {
+        slider.addEventListener("mouseover", () =>
+          clearInterval(slideInterval)
+        );
+        slider.addEventListener("mouseout", () => {
+          slideInterval = setInterval(autoSlide, autoSlideInterval);
+        });
+      });
+    </script>
+  </body>
+</html>

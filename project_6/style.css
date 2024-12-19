@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.carousel-app {
+  padding: 16px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.carousel-slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.img-display {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
+
+.slide-img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  transition: ease-in-out 2s;
+}
+
+.carousel-imgs-container {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 40: FaQs</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="faq-container">
+      <h1 class="board-title">
+        <i class="header-icon bi bi-question-lg"></i> FAQs
+      </h1>
+      <!-- Questions -->
+      <div class="question">
+        <div class="question-header">
+          <p class="question-title">What is coding?</p>
+          <button class="show-ans-btn">
+            <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+        <p class="question-answered">
+          Software programming or computing programming involves writing
+          instructions to communicate with machines. All devices –– laptops,
+          desktops, phones, and tablets –– rely on code to operate.
+        </p>
+      </div>
+
+      <div class="question">
+        <div class="question-header">
+          <p class="question-title">
+            Which programming language should i learn first?
+          </p>
+          <button class="show-ans-btn">
+            <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+        <p class="question-answered">
+          The best programming language to start with depends on your goals and
+          interests. Python is often recommended for beginners due to its simple
+          syntax and versatility. Other popular options include JavaScript,
+          Java, and C++.
+        </p>
+      </div>
+
+      <div class="question">
+        <div class="question-header">
+          <p class="question-title">How do I improve my coding skill?</p>
+          <button class="show-ans-btn">
+            <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+        <p class="question-answered">
+          Software programming or computing programming involves writing
+          instructions to communicate with machines. All devices –– laptops,
+          desktops, phones, and tablets –– rely on code to operate.
+        </p>
+      </div>
+
+      <div class="question">
+        <div class="question-header">
+          <p class="question-title">How do I debug my code effectively</p>
+          <button class="show-ans-btn">
+            <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+        <p class="question-answered">
+          Software programming or computing programming involves writing
+          instructions to communicate with machines. All devices –– laptops,
+          desktops, phones, and tablets –– rely on code to operate.
+        </p>
+      </div>
+
+      <div class="question">
+        <div class="question-header">
+          <p class="question-title">What are APIs, and how do they work?</p>
+          <button class="show-ans-btn">
+            <i class="bi bi-plus-circle"></i>
+          </button>
+        </div>
+        <p class="question-answered">
+          Software programming or computing programming involves writing
+          instructions to communicate with machines. All devices –– laptops,
+          desktops, phones, and tablets –– rely on code to operate.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Select the show answer button and the answer text
+      const questions = document.querySelectorAll(".question");
+
+      // Iterate over all questions to apply the toggle functionality
+      questions.forEach((question) => {
+        const answer = question.querySelector(".question-answered");
+        const showAnsBtn = question.querySelector(".show-ans-btn");
+
+        // Initially hide the answer
+        answer.style.display = "none";
+
+        // Add click event listener to the button
+        showAnsBtn.addEventListener("click", () => {
+          // Toggle the answer visibility
+          if (answer.style.display === "none") {
+            answer.style.display = "block";
+            question.style.backgroundColor = "#33aab0"; // Set background color for the entire question div
+            question.style.color = "#fff"; // Set text color for the entire question div
+            showAnsBtn.innerHTML = '<i class="bi bi-dash-circle"></i>'; // Change button icon
+            showAnsBtn.style.backgroundColor = "#33aab0";
+            showAnsBtn.style.color = "#fff";
+            question.style.borderRadius = "16px";
+            question.style.padding = "20px 16px 14px";
+          } else {
+            answer.style.display = "none";
+            question.style.backgroundColor = ""; // Reset background color
+            question.style.color = ""; // Reset text color
+            showAnsBtn.innerHTML = '<i class="bi bi-plus-circle"></i>'; // Change button icon
+            showAnsBtn.style.backgroundColor = "";
+            showAnsBtn.style.color = "";
+            question.style.borderRadius = "24px";
+            question.style.padding = "12px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

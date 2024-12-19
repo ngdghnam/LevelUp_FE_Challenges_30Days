@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./imgs/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.list-app {
+  width: 80%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.product-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.detail-products-container {
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.product-container {
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.product-controller {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sum-controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-controller {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.del-btn {
+  position: absolute;
+  top: 16px;
+  right: 4px;
+  font-size: 28px;
+  border: none;
+  background-color: inherit;
+}
+
+.quantity-btn {
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.pay-bills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-summary-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: auto;
+  width: 300px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.info-summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.info-title {
+  font-weight: 600;
+}
+
+.line {
+  margin: 16px 0 12px;
+}
+
+.total-title {
+  font-size: 24px;
+}
+
+.total-desc-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.promo-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 300px;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #fff;
+}
+
+.promo-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+.promo-input {
+  width: 100%;
+  padding: 8px 5px;
+  border-radius: 8px;
+  border: 1px #333 solid;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}

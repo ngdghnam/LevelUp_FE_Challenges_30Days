@@ -1,0 +1,119 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin-top: 48px;
+  background-color: #e7ffcf;
+}
+
+.notify-modal {
+  margin: auto;
+  width: 600px;
+  height: auto;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 10px 6px 0px 1px rgba(31, 168, 0, 1);
+  background-color: #fff;
+}
+
+/* Nut x */
+.close-btn {
+  width: 36px;
+  height: 36px;
+  float: right;
+  border: none;
+  clip-path: circle(50%);
+  font-size: 28px;
+  padding: 4px;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+}
+
+/* content */
+.sub-desc {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.notification {
+  display: flex;
+  margin: 16px 0px;
+  align-items: center;
+}
+
+.desc-container {
+  margin-left: 8px;
+}
+
+.desc {
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+.icon-container {
+  width: 30px;
+  height: 30px;
+  clip-path: circle(50%);
+  background-color: rgba(31, 168, 0, 1);
+  color: #fff;
+  position: relative;
+  padding: 4px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Buttons */
+.btns-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 0px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.block-btn {
+  border: #f32013 solid 1px;
+  color: #f32013;
+}
+
+.block-btn:hover {
+  color: #fff;
+  background-color: #f32013;
+}
+
+.allow-btn {
+  border: rgba(31, 168, 0, 1) 1px solid;
+  color: rgba(31, 168, 0, 1);
+}
+
+.allow-btn:hover {
+  color: #fff;
+  background-color: rgba(31, 168, 0, 1);
+}

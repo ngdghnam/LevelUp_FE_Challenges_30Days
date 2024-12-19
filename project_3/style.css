@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #e8ebf4;
+  height: 100vh;
+  margin-top: 24px;
+}
+
+.app-mobile {
+  width: 375px;
+  height: auto;
+  margin: auto;
+  padding: 16px 20px;
+  line-height: 1.4;
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.personal-info-container {
+  display: flex;
+}
+
+.avt {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.personal {
+  margin-left: 12px;
+}
+
+.personal-name {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.personal-job {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.line {
+  margin-top: 16px;
+}
+
+.nav {
+  margin: 8px 0px;
+}
+
+.task-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 24px 0;
+}
+
+.task-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #e6eafd;
+  position: relative;
+}
+
+.task-icon {
+  color: #333;
+  font-size: 24px;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.task {
+  width: 86%;
+  margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-desc {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.show-task-btn {
+  background-color: inherit;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-container {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-icon {
+  font-size: 24px;
+  cursor: pointer;
+}

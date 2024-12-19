@@ -1,0 +1,7 @@
+color-codes: https://html-color.codes/orange
+easy-code-tools: https://www.easycodetools.com/tool/css-boxshadow-gen
+color-hex: https://www.color-hex.com/
+box-shadow: https://getcssscan.com/css-box-shadow-examples
+image-to-text: https://www.imagetotext.info/
+SVG: https://www.svgrepo.com/
+text-gradient: https://gradient.page/css/text-gradient

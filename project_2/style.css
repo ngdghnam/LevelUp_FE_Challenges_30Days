@@ -1,0 +1,32 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  padding: 2px;
+}
+
+.left,
+.right {
+  padding: 2px;
+}
+
+.left {
+  display: flex;
+}
+
+.thumbnail-container {
+  margin: 4px;
+}
+
+.thumbnail,
+.thumbnail-img {
+  width: 100px;
+  height: 160px;
+  object-fit: cover;
+}

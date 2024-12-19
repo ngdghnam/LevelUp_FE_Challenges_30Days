@@ -1,0 +1,141 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto";
+}
+
+body {
+  margin-top: 48px;
+}
+
+.calling-popup-container {
+  margin: auto;
+  width: 360px;
+  height: 600px;
+  text-align: center;
+  border-radius: 16px;
+  position: relative;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+.bg-img {
+  background-image: url("./imgs/model_2.jpg");
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  height: 100%;
+  border-radius: 8px;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.blur-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.content-container {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: #fff;
+  z-index: 100;
+  text-align: center;
+}
+
+.connect-desc {
+  color: #118b50;
+  margin: 16px 0px;
+  font-weight: 550;
+}
+
+.contact-name {
+  margin: 12px 0px 6px;
+  font-weight: 540;
+}
+
+.calling-time {
+  font-size: 12px;
+  color: #d9d9d9;
+}
+
+.avt-container {
+  margin: 20px 0px 20px;
+}
+
+.calling-popup-container .avt-container .avt {
+  object-fit: cover;
+  object-position: center;
+  width: 140px;
+  height: 140px;
+  clip-path: circle(50%);
+}
+
+.btns-group {
+  margin: 60px 0px 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn {
+  width: 54px;
+  height: 54px;
+  padding: 4px;
+  border-radius: 50%;
+  border: none;
+  clip-path: circle(50%);
+  font-size: 20px;
+  margin: 0px 8px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.decline-container {
+  margin-top: 128px;
+  margin-left: 90px;
+  margin-right: 90px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 48px;
+  background-color: #e9e9ec;
+  color: #333;
+  border: 1px #fff groove;
+  position: relative;
+}
+
+.decline-btn {
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  clip-path: circle(50%);
+  position: absolute;
+  border-radius: 50%;
+  font-size: 18px;
+  top: -5px;
+  left: -3px;
+  border: #fff;
+  color: #fff;
+  background-color: #fd8587;
+  box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 1);
+}
+
+.decline-desc {
+  font-size: 14px;
+  margin-left: 18px;
+}

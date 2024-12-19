@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+    />
+    <title>Project 63: Weather App</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Location -->
+      <div class="location">
+        <h1 class="location-name">London</h1>
+        <p class="location-desc">Sun with occassional cloud</p>
+        <object
+          data="./SVG/cloudy.svg"
+          type=""
+          class="location-desc-svg"
+        ></object>
+      </div>
+      <!-- Detailed info -->
+      <div class="weather-info">
+        <h1 class="weather-temper">24<sup class="temper-sub">o</sup></h1>
+        <div class="weather-detailed-container">
+          <div class="detailed">
+            <p class="detailed-title">UV</p>
+            <p class="detailed-desc-num">4</p>
+          </div>
+          <div class="detailed">
+            <p class="detailed-title">%rain</p>
+            <p class="detailed-desc-num">5%</p>
+          </div>
+          <div class="detailed">
+            <p class="detailed-title">AQ</p>
+            <p class="detailed-desc-num">22</p>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel -->
+      <div class="next-day-info-carousel">
+        <div class="carousel-track">
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object
+                data="./SVG/cloudy.svg"
+                type=""
+                class="modal-svg"
+              ></object>
+              <h1 class="modal-tempo">
+                21<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Tomorrow</p>
+          </div>
+
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object
+                data="./SVG/cloudy_rainy.svg"
+                type=""
+                class="modal-svg"
+              ></object>
+              <h1 class="modal-tempo">
+                18<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Monday</p>
+          </div>
+
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object data="./SVG/sunny.svg" type="" class="modal-svg"></object>
+              <h1 class="modal-tempo">
+                26<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Tuesday</p>
+          </div>
+
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object
+                data="./SVG/cloudy_rainy.svg"
+                type=""
+                class="modal-svg"
+              ></object>
+              <h1 class="modal-tempo">
+                24<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Wednesday</p>
+          </div>
+
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object
+                data="./SVG/cloudy_rainy.svg"
+                type=""
+                class="modal-svg"
+              ></object>
+              <h1 class="modal-tempo">
+                25<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Thursday</p>
+          </div>
+
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object
+                data="./SVG/cloudy_rainy.svg"
+                type=""
+                class="modal-svg"
+              ></object>
+              <h1 class="modal-tempo">
+                27<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Friday</p>
+          </div>
+
+          <div class="carousel-modal">
+            <div class="modal-frame-container">
+              <object data="./SVG/sunny.svg" type="" class="modal-svg"></object>
+              <h1 class="modal-tempo">
+                21<sup class="modal-tempo-desc">o</sup>
+              </h1>
+            </div>
+            <p class="modal-desc">Saturday</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector(".carousel-track");
+        const items = document.querySelectorAll(".carousel-modal");
+        const totalItems = items.length;
+        const itemWidth = items[0].offsetWidth + 16; // Kích thước của mỗi item (bao gồm cả margin)
+        let currentIndex = 0;
+
+        // Clone các phần tử đầu để tạo hiệu ứng lặp
+        items.forEach((item) => {
+          const clone = item.cloneNode(true);
+          track.appendChild(clone);
+        });
+
+        function startCarousel() {
+          currentIndex++;
+
+          // Nếu đã đến phần tử cuối, reset về đầu
+          if (currentIndex >= totalItems) {
+            track.style.transition = "none"; // Loại bỏ chuyển động mượt
+            track.style.transform = `translateX(0)`; // Reset về đầu
+            currentIndex = 0;
+
+            // Chờ một chút trước khi thêm lại hiệu ứng
+            setTimeout(() => {
+              track.style.transition = "transform 0.5s ease-in-out";
+            }, 50);
+          } else {
+            // Di chuyển track
+            track.style.transform = `translateX(-${
+              currentIndex * itemWidth
+            }px)`;
+          }
+        }
+
+        // Bắt đầu carousel
+        setInterval(startCarousel, 2000); // Chạy mỗi 3 giây
+      });
+    </script>
+  </body>
+</html>
