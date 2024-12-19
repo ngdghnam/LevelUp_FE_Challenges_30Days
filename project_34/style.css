@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #e7e7e7;
+}
+
+.user-profile-container {
+  width: 360px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.personal-info {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.show-more-btn {
+  font-size: 18px;
+  border: none;
+  background-color: inherit;
+  position: absolute;
+  right: 16px;
+}
+
+.avt {
+  width: 60px;
+  height: 60px;
+  clip-path: circle(50%);
+  background-image: url("./avt.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-name {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.info-email {
+  font-size: 13px;
+}
+
+.controller-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controller {
+  padding: 8px;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+.controller-icon {
+  font-size: 24px;
+}
+
+.sign-out-container {
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.sign-out-btn {
+  padding: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.sign-out-icon {
+  margin-right: 12px;
+}

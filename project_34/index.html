@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 34: User Profile</title>
+  </head>
+  <body>
+    <div class="user-profile-container">
+      <!-- Personal info -->
+      <div class="personal-info">
+        <div class="avt"></div>
+        <div class="info">
+          <p class="info-name">Hoai Nam</p>
+          <p class="info-email">namndh2240@st.uel.edu.vn</p>
+        </div>
+        <button class="show-more-btn"><i class="bi bi-three-dots"></i></button>
+      </div>
+
+      <hr class="line" />
+
+      <!-- Controllers container -->
+      <div class="controller-container">
+        <!-- Begin a controller -->
+        <div class="controller">
+          <i class="bi bi-tools controller-icon"></i>
+          <p class="controller-desc">Profile Settings</p>
+        </div>
+        <!-- End a controller -->
+
+        <!-- Begin a controller -->
+        <div class="controller">
+          <i class="bi bi-question-circle controller-icon"></i>
+          <p class="controller-desc">Help center</p>
+        </div>
+        <!-- End a controller -->
+
+        <!-- Begin a controller -->
+        <div class="controller">
+          <i class="bi bi-wallet2 controller-icon"></i>
+          <p class="controller-desc">Billing</p>
+        </div>
+        <!-- End a controller -->
+
+        <!-- Begin a controller -->
+        <div class="controller">
+          <i class="bi bi-graph-up-arrow controller-icon"></i>
+          <p class="controller-desc">Upgrade plan</p>
+        </div>
+        <!-- End a controller -->
+      </div>
+
+      <hr class="line" />
+
+      <!-- Sign out -->
+      <div class="sign-out-container">
+        <button class="sign-out-btn">
+          <i class="bi bi-door-open sign-out-icon"></i>Sign out
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
