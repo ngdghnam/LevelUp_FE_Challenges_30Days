@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Project 47: Export File</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="img-container"></div>
+      <div class="controller-container">
+        <!-- format file -->
+        <div class="controller-format">
+          <h1 class="title">Export file</h1>
+          <hr class="line" />
+          <!-- Choose type -->
+          <div class="choose-type-container">
+            <h1 class="choose-type-desc">Format</h1>
+            <!-- Type -->
+            <div class="type">
+              <label for="" class="type-file">jpg</label>
+              <input type="radio" name="typefile" id="jpg" />
+            </div>
+            <!-- End type -->
+
+            <!-- Type -->
+            <div class="type">
+              <label for="" class="type-file">png</label>
+              <input type="radio" name="typefile" id="png" />
+            </div>
+            <!-- End type -->
+
+            <!-- Type -->
+            <div class="type">
+              <label for="" class="type-file">gif</label>
+              <input type="radio" name="typefile" id="gif" />
+            </div>
+            <!-- End type -->
+
+            <!-- Type -->
+            <div class="type">
+              <label for="" class="type-file">tiff</label>
+              <input type="radio" name="typefile" id="tiff" />
+            </div>
+            <!-- End type -->
+          </div>
+          <!-- End choose type -->
+          <hr class="line" />
+          <!-- Quality -->
+          <div class="choose-quality-container">
+            <!-- Info -->
+            <div class="quality-info">
+              <h1 class="photo-quality-title">Photo Quality</h1>
+              <p class="quality-desc">80%</p>
+            </div>
+            <!-- range sliderslider -->
+            <div class="range-slider-container">
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                class="slider"
+                id="quality-range"
+              />
+            </div>
+            <!-- End range slider -->
+
+            <!-- Select size -->
+            <div class="select-size-container">
+              <h1 class="select-size-title">Size</h1>
+              <select name="" id="">
+                <option value="1px">1px</option>
+                <option value="2px">2px</option>
+                <option value="3px">3px</option>
+                <option value="4px">4px</option>
+              </select>
+            </div>
+            <!-- End select size -->
+
+            <!-- export -->
+            <button class="export-btn">Export file</button>
+          </div>
+        </div>
+        <!-- export file -->
+        <div class="controller-export">
+          <div class="export-info">
+            <h1 class="export-info-title">Exporting...</h1>
+            <div class="controller-btns-gr">
+              <button class="controller-btn">
+                <i class="bi bi-pause"></i>
+              </button>
+              <button class="controller-btn">
+                <i class="bi bi-x"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Progess bar -->
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+          <p class="desc">50%</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

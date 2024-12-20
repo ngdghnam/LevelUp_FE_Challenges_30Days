@@ -1,2 +1,2 @@
-project 2, 10, 26, 37, 94, 100: chua xong
+project 2, 10, 17, 26, 37, 94, 100: chua xong
 project 70: chua xong phan chuyen trang 

@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("./imgs/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.add-modal {
+  width: 480px;
+  background-color: #fff;
+  height: auto;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.clos-btn {
+  float: right;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  font-size: 28px;
+}
+
+.modal-title {
+  margin-top: 18px;
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 8px;
+  outline-color: #3a1078;
+  border: 2px solid #4e31aa;
+}
+
+.shots {
+  margin: 24px 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.shot {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  padding: 6px 10px;
+  align-items: center;
+  line-height: 1.4;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.shot:active {
+  cursor: pointer;
+  border: 4px solid pink;
+}
+
+.shot-img-container {
+  width: 100px;
+  height: 64px;
+}
+
+.shot-img {
+  width: 100px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 12px;
+}
+
+.shot-desc-title {
+  font-size: 16px;
+}
+
+.shot-desc-quantity,
+.shot-desc-update {
+  font-size: 12px;
+}
+
+.btns-gr {
+  display: flex;
+  justify-content: space-between;
+  margin: 48px 0 24px;
+}
+
+.add-btn {
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.add-btn:hover {
+  background-color: #6c14ff;
+  color: #fff;
+}

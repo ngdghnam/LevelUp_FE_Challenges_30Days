@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Project 86: Chatbot</title>
+  </head>
+  <body>
+    <div class="chatbot-container">
+      <div class="chatbot">
+        <!-- Logo -->
+        <object
+          data="./SVG/chatbot-svgrepo-com.svg"
+          type=""
+          class="chatbot-logo"
+        ></object>
+
+        <!-- Message -->
+        <div class="message-container">
+          <!-- Header -->
+          <div class="header">
+            <!-- Avatar -->
+            <div class="avt-container">
+              <object
+                data="./SVG/chatbot-svgrepo-com.svg"
+                type=""
+                class="avt"
+              ></object>
+            </div>
+            <!-- desc -->
+            <div class="info">
+              <p class="chatbot-name">Hoai Nam AI</p>
+              <div class="controller">
+                <button class="controller-btn">
+                  <i class="bi bi-caret-down"></i>
+                </button>
+                <button class="controller-btn">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="content">
+            <p class="time-date">20 Dec. 2024</p>
+            <!-- A message -->
+            <div class="user-message">
+              <div class="small-avt-container">
+                <object
+                  data="./SVG/chatbot-svgrepo-com.svg"
+                  type=""
+                  class="small-avt"
+                ></object>
+              </div>
+              <div class="message-content-desc">
+                <p class="message-content">
+                  Hey there, I am an A.I. Chatbot, let's talk
+                </p>
+              </div>
+            </div>
+            <!-- End a message -->
+
+            <!-- A message from user -->
+            <div class="user-message reverse">
+              <div class="message-content-desc user-reverse">
+                <p class="message-content">Ok, tell me can Ronaldo win a WC?</p>
+              </div>
+            </div>
+            <!-- End a message from user -->
+
+            <!-- A message -->
+            <div class="user-message">
+              <div class="small-avt-container">
+                <object
+                  data="./SVG/chatbot-svgrepo-com.svg"
+                  type=""
+                  class="small-avt"
+                ></object>
+              </div>
+              <div class="message-content-desc">
+                <p class="message-content">
+                  Sorry, but your Idol can never win a World Cup!
+                </p>
+              </div>
+            </div>
+            <!-- End a message -->
+
+            <!-- A message from user -->
+            <div class="user-message reverse">
+              <div class="message-content-desc user-reverse">
+                <p class="message-content">Ok, thanks SIUUU</p>
+              </div>
+            </div>
+            <!-- End a message from user -->
+
+            <!-- A message -->
+            <div class="user-message">
+              <div class="small-avt-container">
+                <object
+                  data="./SVG/chatbot-svgrepo-com.svg"
+                  type=""
+                  class="small-avt"
+                ></object>
+              </div>
+              <div class="message-content-desc">
+                <p class="message-content">
+                  If you have any question, please don't feel hesitate to ask me
+                </p>
+              </div>
+            </div>
+            <!-- End a message -->
+          </div>
+
+          <div class="input-message-container">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="input-container"
+              placeholder="Enter your message"
+            />
+            <div class="input-btn-gr">
+              <button class="input-btn">
+                <i class="bi bi-emoji-smile"></i>
+              </button>
+              <button class="input-btn">
+                <i class="bi bi-file-earmark"></i>
+              </button>
+              <button class="input-btn">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- popup-num -->
+        <div class="num">
+          <p class="num-desc">1</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
