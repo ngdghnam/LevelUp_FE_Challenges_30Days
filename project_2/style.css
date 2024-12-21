@@ -1,32 +1,164 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  padding: 2px;
+@font-face {
+  font-family: "Bona Nova";
+  src: url("./fonts/bonanova-regular-webfont.woff") format("woff"),
+    url("./fonts/bonanova-regular-webfont.woff2") format("woff2");
 }
 
-.left,
-.right {
-  padding: 2px;
+html {
+  font-family: "Bona Nova", serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.wrapper {
+  width: 1000px;
+  height: 80vh;
+  display: flex;
+  gap: 4px;
+}
+
+.container {
+  width: 50%;
+  padding: 4px;
+  height: 100%;
+}
+
+.thumbnail {
+  width: 90px;
+  height: 128px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .left {
   display: flex;
+  gap: 8px;
 }
 
-.thumbnail-container {
-  margin: 4px;
+.detailed {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.thumbnail,
+.main-thumbnail {
+  width: 600px;
+  height: 100%;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
 .thumbnail-img {
-  width: 100px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.category-desc {
+  text-transform: uppercase;
+  color: #1a76ff;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.name {
+  font-size: 48px;
+  text-transform: capitalize;
+}
+
+.name-desc {
+  color: grey;
+  font-weight: 500;
+}
+
+.main-price-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.current-price {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.sale-rate {
+  color: #1a76ff;
+  font-weight: 700;
+  background-color: #a8ccfe;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.origin-price {
+  font-size: 24px;
+  text-decoration: line-through;
+  color: #ccc;
+  font-weight: 700;
+}
+
+.chose-size-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.size {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.size:hover {
+  color: #fff;
+  background-color: #1f1f1f;
+}
+
+.size-desc {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.sizes {
+  display: flex;
+  gap: 24px;
+}
+
+.add-btn {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: "Bona Nova";
+  font-weight: 700;
+  background-color: #1a76ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

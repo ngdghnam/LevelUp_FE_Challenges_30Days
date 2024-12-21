@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  color: #333;
+  padding: 24px;
+}
+
+.app-notitfication {
+  position: relative;
+  margin: 0 200px;
+}
+
+.notification-btn {
+  cursor: pointer;
+}
+
+.notification-container {
+  position: absolute;
+  width: 300px;
+  min-height: 100px;
+  background-color: #fff;
+  right: 0;
+  top: 40px;
+  border-radius: 12px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  line-height: 1.4;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+}
+
+.header-title {
+  font-size: 18px;
+}
+
+.notification-btn {
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  background-color: #fff;
+  color: #333;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  padding: 4px 0;
+}
+
+.read-btn {
+  border: none;
+  background-color: inherit;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.desc {
+  text-align: center;
+}
+
+.notice {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.notice-context {
+  flex-shrink: 6;
+}
+
+.avt {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.avt-img {
+  width: 40px;
+  height: 40px;
+  clip-path: circle(50%);
+  object-fit: cover;
+}
+
+.notice-title {
+  font-size: 13px;
+}
+
+.notice-time {
+  font-size: 9px;
+}
+
+.friend-request-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+  padding-bottom: 8px;
+}
+
+.req-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  width: 100%;
+  padding-right: 25px;
+}
+
+.req-btn {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 4px 0;
+  border: none;
+}
+
+.acp {
+  background-color: #6e41e2;
+  color: #fff;
+}
+
+.friend-request-container > .notice {
+  border-bottom: none;
+}
+
+.see-btn-container {
+  width: 100%;
+  padding: 4px 6px;
+}
+
+.see-btn {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #6e41e2;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.unread {
+  background-color: #ddd;
+}

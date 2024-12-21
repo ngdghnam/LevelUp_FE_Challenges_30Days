@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(2deg, #ff00cc 0%, #333399 100%);
+  background-image: url("./bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 1000px;
+  display: flex;
+  padding: 12px;
+  line-height: 1.4;
+}
+
+.container {
+  width: 50%;
+}
+
+.map-info-container {
+  color: #fff;
+}
+
+.contact-form {
+  margin: auto;
+  width: 400px;
+  height: auto;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.input-info {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid rgba(51, 51, 51, 0.6);
+}
+
+.choose-method-container {
+  margin: 12px 0;
+}
+
+.choose-desc {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.methods {
+  display: flex;
+  gap: 12px;
+}
+
+.method {
+  display: flex;
+  gap: 4px;
+}
+
+.method-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.text-area-container {
+  margin: 16px 0;
+}
+
+#message {
+  width: 100%;
+  height: 142px;
+  border-radius: 6px;
+  padding: 6px 4px;
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 48px;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  background-color: #fe007a;
+  outline: none;
+  border: none;
+}
+
+.dot {
+  height: 16px;
+  width: 16px;
+  background-color: #fe007a;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 180px 0px #9917ff;
+}
+
+.main-desc-container {
+  width: 400px;
+}
+
+.main-desc {
+  font-size: 48px;
+}
+
+.sub-desc {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.map {
+  margin-top: 168px;
+  position: relative;
+}
+
+.address {
+  top: -72px;
+  position: absolute;
+  padding: 4px;
+  width: 320px;
+  height: auto;
+  background-color: #fe007a;
+  border-radius: 8px;
+}

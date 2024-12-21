@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 15: Notifications</title>
+  </head>
+  <body>
+    <!-- 1 app -->
+    <div class="app-notitfication">
+      <button class="notification-btn">
+        <i class="bi bi-bell"></i>
+      </button>
+
+      <!-- notitcation list -->
+      <div class="notification-container">
+        <div class="header">
+          <h1 class="header-title">Notications</h1>
+          <button class="read-btn">Mark as read</button>
+        </div>
+        <div class="content">
+          <p class="desc">You don't have any notifications yet</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 app -->
+    <div class="app-notitfication">
+      <button class="notification-btn">
+        <i class="bi bi-bell"></i>
+      </button>
+
+      <!-- notitcation list -->
+      <div class="notification-container">
+        <div class="header">
+          <h1 class="header-title">Notications</h1>
+          <button class="read-btn">Mark as read</button>
+        </div>
+        <!-- Content -->
+        <div class="content">
+          <!-- Begin a notice -->
+          <div class="notice unread">
+            <div class="avt">
+              <img src="./imgs/book1.jpg" alt="" class="avt-img" />
+            </div>
+            <div class="notice-context">
+              <p class="notice-title">
+                <b>Jane Annie</b> join to <b>"Design"</b> Group
+              </p>
+              <p class="notice-time">2 min ago</p>
+            </div>
+          </div>
+          <!-- End a notice -->
+          <!-- Begin a notice -->
+          <div class="notice">
+            <div class="avt">
+              <img src="./imgs/book2.jpg" alt="" class="avt-img" />
+            </div>
+            <div class="notice-context">
+              <p class="notice-title">
+                <b>Ryan</b> mentioned you in a <b>Comment</b>
+              </p>
+              <p class="notice-time">2 min ago</p>
+            </div>
+          </div>
+          <!-- End a notice -->
+
+          <!-- A friend req -->
+          <div class="friend-request-container">
+            <!-- Begin a notice -->
+            <div class="notice">
+              <div class="avt">
+                <img src="./imgs/book3.jpg" alt="" class="avt-img" />
+              </div>
+              <div class="notice-context">
+                <p class="notice-title">
+                  <b>Central</b> send you a <b>Friend Request</b>
+                </p>
+                <p class="notice-time">1 day ago</p>
+              </div>
+            </div>
+            <!-- End a notice -->
+            <div class="req-btn-container">
+              <button class="req-btn acp">Accept</button>
+              <button class="req-btn del">Delete</button>
+            </div>
+          </div>
+          <!-- End A friend req -->
+
+          <!-- Upload an attachment -->
+          <div class="attach-container">
+            <!-- Begin a notice -->
+            <div class="notice">
+              <div class="avt">
+                <img src="./imgs/book5.jpg" alt="" class="avt-img" />
+              </div>
+              <div class="notice-context">
+                <p class="notice-title">
+                  <b>Jerry</b> upload 2 attachment to <b>Source</b> channel
+                </p>
+                <p class="notice-time">1 day ago</p>
+              </div>
+            </div>
+            <!-- End a notice -->
+          </div>
+          <!-- End Upload an attachment -->
+        </div>
+        <!-- End content -->
+
+        <div class="see-btn-container">
+          <button class="see-btn">See all notitcation</button>
+        </div>
+      </div>
+      <!-- End notification list -->
+    </div>
+  </body>
+</html>

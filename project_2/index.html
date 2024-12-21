@@ -4,34 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Project 2: Add to bag</title>
+    <title>Project 2: Add to cart</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="left">
+      <!-- Left -->
+      <div class="container left">
         <div class="thumbnail-container">
           <div class="thumbnail">
-            <img class="thumbnail-img" src="./img/img_1.jpg" alt="" srcset="" />
+            <img src="./img/img_4.jpg" alt="" srcset="" class="thumbnail-img" />
           </div>
           <div class="thumbnail">
-            <img class="thumbnail-img" src="./img/img_2.jpg" alt="" srcset="" />
+            <img src="./img/img_2.jpg" alt="" srcset="" class="thumbnail-img" />
           </div>
           <div class="thumbnail">
-            <img class="thumbnail-img" src="./img/img_3.jpg" alt="" srcset="" />
+            <img src="./img/img_3.jpg" alt="" srcset="" class="thumbnail-img" />
           </div>
         </div>
-        <div class="main-container">
-          <div class="main-thumbnail">
-            <img
-              class="main-thumbnail-img"
-              src="./img/img_1.jpg"
-              alt=""
-              srcset=""
-            />
-          </div>
-        </div>
+        <div class="main-thumbnail"></div>
       </div>
-      <div class="right"></div>
+      <!-- Right -->
+      <div class="container detailed">
+        <p class="category-desc">polo ralph</p>
+        <h1 class="name">custom fit polo bear oxford shirt</h1>
+        <p class="name-desc">
+          Blue polo with a classic cut. Made of smooth and soft cotton.
+        </p>
+
+        <!-- price  -->
+        <div class="price-container">
+          <!-- Gia hien tai -->
+          <div class="main-price-container">
+            <p class="current-price">$99.00</p>
+            <p class="sale-rate">-25%</p>
+          </div>
+          <!-- gia goc -->
+          <p class="origin-price">$132.00</p>
+        </div>
+        <!-- End price -->
+
+        <!-- Choose size -->
+        <div class="choose-size-container">
+          <h1 class="chose-size-title">Choose size</h1>
+          <div class="sizes">
+            <div class="size"><p class="size-desc">s</p></div>
+            <div class="size"><p class="size-desc">m</p></div>
+            <div class="size"><p class="size-desc">l</p></div>
+            <div class="size"><p class="size-desc">xl</p></div>
+            <div class="size"><p class="size-desc">xxl</p></div>
+          </div>
+        </div>
+        <!-- End choose size -->
+
+        <button class="add-btn">add to bag</button>
+      </div>
     </div>
   </body>
+  <script>
+    // Get all thumbnail images and main thumbnail container
+    const thumbnails = document.querySelectorAll(".thumbnail-img");
+    const mainThumbnail = document.querySelector(".main-thumbnail");
+
+    // Set first image as default in main thumbnail
+    if (thumbnails.length > 0) {
+      mainThumbnail.style.backgroundImage = `url(${thumbnails[0].src})`;
+      mainThumbnail.style.backgroundSize = "cover";
+      mainThumbnail.style.backgroundPosition = "center";
+
+      // Add active class to first thumbnail
+      thumbnails[0].parentElement.classList.add("active");
+    }
+
+    // Add click event listener to each thumbnail
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("click", function () {
+        // Update main thumbnail image
+        mainThumbnail.style.backgroundImage = `url(${this.src})`;
+        mainThumbnail.style.backgroundSize = "cover";
+        mainThumbnail.style.backgroundPosition = "center";
+
+        // Remove active class from all thumbnails
+        thumbnails.forEach((thumb) => {
+          thumb.parentElement.classList.remove("active");
+        });
+
+        // Add active class to clicked thumbnail
+        this.parentElement.classList.add("active");
+      });
+    });
+
+    // Add hover effect
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("mouseover", function () {
+        this.style.opacity = "0.8";
+        this.style.cursor = "pointer";
+      });
+
+      thumbnail.addEventListener("mouseout", function () {
+        this.style.opacity = "1";
+      });
+    });
+  </script>
 </html>
