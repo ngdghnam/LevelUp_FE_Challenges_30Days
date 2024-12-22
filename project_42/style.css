@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.app {
+  background-color: #fbf6e9;
+  width: 500px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cls-btn {
+  font-size: 29px;
+  border: none;
+  background-color: inherit;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  line-height: 1.4;
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+}
+
+ul li {
+  display: inline-block;
+  font-weight: 600;
+}
+
+ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.select-language-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.ui-chosen-title,
+.select-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.ui-chosen-desc,
+.select-desc {
+  font-size: 12px;
+  color: #9aa6b2;
+  font-weight: 500;
+}
+
+#language-chosen {
+  width: 132px;
+  height: 40px;
+  padding: 4px 4px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.color {
+  width: 24px;
+  height: 24px;
+  clip-path: circle(50%);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.accent-color-chosen-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.accent-info-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.accent-info-desc {
+  font-size: 12px;
+  color: #9aa6b2;
+  font-weight: 500;
+}
+
+.colors-container {
+  display: flex;
+  gap: 6px;
+}
+
+.green {
+  background-color: #00712d !important;
+  border: #00712d 1px solid !important;
+}
+
+.blue {
+  background-color: #1230ae !important;
+  border: #1230ae 1px solid !important;
+}
+
+.pink {
+  background-color: #c68fe6 !important;
+  border: #c68fe6 1px solid !important;
+}
+
+.yellow {
+  background-color: #fcde70 !important;
+  border: 1px solid #fcde70 !important;
+}
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  clip-path: circle(50%);
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: none;
+}
+
+.color:hover .dot {
+  display: block;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reset-btn-desc {
+  font-size: 14px;
+  color: #9aa6b2;
+  font-weight: 500;
+}
+
+.reset-btn {
+  text-align: center;
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
+  color: #9aa6b2;
+}
+
+.controller-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600px;
+  font-size: 16.5px;
+}
+
+.cancel {
+  background-color: #ccc;
+  color: #9aa6b2;
+}
+
+.save {
+  background-color: #1230ae;
+  color: #fff;
+}
+
+.chosen-container {
+  display: flex;
+  gap: 12px;
+}
+
+.chosen {
+  width: 160px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.light {
+  background-color: #ccc;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  clip-path: circle(50%);
+}
+
+.rect-one {
+  flex: 1;
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.rect-two {
+  flex: 1;
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.rect-four {
+  width: 48%;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.color-ui-chosen {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dark {
+  background-color: #1f1f1f;
+}
+
+.light-bg {
+  background-color: #fff !important;
+}
+
+.dark-bg {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.success-border {
+  border: 2px solid #5cb338 !important;
+}

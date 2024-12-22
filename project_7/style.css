@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Schibsted Grotesk";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./imgs/my-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: 500px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.title-desc {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: gray;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.input-container {
+  width: 48%;
+  position: relative;
+  background-color: #e9ebf8;
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  background-color: inherit;
+  outline: none;
+  padding: 6px 4px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+input::placeholder {
+  color: rgba(31, 31, 31, 0.6);
+  font-weight: 500;
+}
+
+.icon-container {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 16px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #686d76;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-field-name {
+  text-transform: capitalize;
+  color: gray;
+  padding-left: 4px;
+  font-size: 12px;
+}
+
+input[type="password"] {
+  width: 100%;
+  background-color: inherit;
+  outline: none;
+  padding: 6px 4px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f1f1f;
+  letter-spacing: 4px;
+}
+
+.input-container:active {
+  border: 2.5px solid #074799;
+  background-color: #fff;
+}
+
+.desc {
+  font-size: 20px;
+  color: gray;
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.signin-btn {
+  font-size: 22px;
+  color: #4887f6;
+  background-color: inherit;
+  border: none;
+  font-weight: 700;
+}
+
+.create-acc-btn {
+  width: 100%;
+  height: 44px;
+  font-size: 18px;
+  border-radius: 24px;
+  background-color: #4887f6;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}

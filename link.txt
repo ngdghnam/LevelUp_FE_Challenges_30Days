@@ -5,3 +5,4 @@ box-shadow: https://getcssscan.com/css-box-shadow-examples
 image-to-text: https://www.imagetotext.info/
 SVG: https://www.svgrepo.com/
 text-gradient: https://gradient.page/css/text-gradient
+hex-to-rgba: https://rgbacolorpicker.com/hex-to-rgba

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Project 42: Setting Appearance</title>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <div class="header">
+        <h1 class="title">Settings</h1>
+        <button class="cls-btn">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+      <!-- End header -->
+
+      <hr class="line" />
+
+      <div class="content">
+        <!-- Navbar -->
+        <div class="navbar">
+          <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Appearance</a></li>
+            <li><a href="#">Account</a></li>
+          </ul>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- Select -->
+        <div class="select-language-container">
+          <div class="select-desc-container">
+            <p class="select-title">Language</p>
+            <p class="select-desc">Select the language of the application</p>
+          </div>
+          <select name="" id="language-chosen">
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+        <!-- Select -->
+
+        <!-- Setting appearance color -->
+        <div class="color-ui-chosen">
+          <div class="desc-info">
+            <p class="ui-chosen-title">Interface theme</p>
+            <p class="ui-chosen-desc">Customise your application theme</p>
+          </div>
+          <div class="chosen-container">
+            <div class="chosen light success-border">
+              <div class="row">
+                <div class="circle light-bg"></div>
+                <div class="rect-one light-bg"></div>
+              </div>
+              <div class="row">
+                <div class="rect-two light-bg"></div>
+              </div>
+              <div class="row">
+                <div class="rect-four light-bg"></div>
+                <div class="rect-four light-bg"></div>
+              </div>
+            </div>
+            <div class="chosen dark">
+              <div class="row">
+                <div class="circle dark-bg"></div>
+                <div class="rect-one dark-bg"></div>
+              </div>
+              <div class="row">
+                <div class="rect-two dark-bg"></div>
+              </div>
+              <div class="row">
+                <div class="rect-four dark-bg"></div>
+                <div class="rect-four dark-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Setting appearance color -->
+
+        <!-- Accent color -->
+        <div class="accent-color-chosen-container">
+          <div class="accent-info-container">
+            <p class="accent-info-title">Accent Color</p>
+            <p class="accent-info-desc">
+              Select the language of the application
+            </p>
+          </div>
+          <div class="colors-container">
+            <!-- Begin a color -->
+            <div class="border-outline">
+              <div class="color green">
+                <div class="dot"></div>
+              </div>
+            </div>
+            <!-- End a color -->
+
+            <!-- Begin a color -->
+            <div class="border-outline">
+              <div class="color pink">
+                <div class="dot"></div>
+              </div>
+            </div>
+            <!-- End a color -->
+
+            <!-- Begin a color -->
+            <div class="border-outline">
+              <div class="color yellow">
+                <div class="dot"></div>
+              </div>
+            </div>
+            <!-- End a color -->
+
+            <!-- Begin a color -->
+            <div class="border-outline">
+              <div class="color blue">
+                <div class="dot"></div>
+              </div>
+            </div>
+            <!-- End a color -->
+          </div>
+        </div>
+        <!-- Accent color -->
+      </div>
+
+      <hr class="line" />
+
+      <div class="footer">
+        <div class="reset-btn-container">
+          <button class="reset-btn">
+            <i class="bi bi-arrow-counterclockwise"></i>
+          </button>
+          <p class="reset-btn-desc">reset to default</p>
+        </div>
+        <div class="controller-btns-container">
+          <button class="controller-btn cancel">Cancel</button>
+          <button class="controller-btn save">Save preferences</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
