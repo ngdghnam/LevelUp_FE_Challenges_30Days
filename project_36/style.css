@@ -255,6 +255,7 @@ body {
 
 .tracking-time-desc {
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 .tracking-review-container {
