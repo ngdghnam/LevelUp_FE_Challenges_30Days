@@ -1,55 +1,54 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+.inputGroup {
+  font-family: "Segoe UI", sans-serif;
+  margin: 1em 0;
+  position: relative;
+  border: none;
 }
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.signup-modal {
-  margin: 16px;
-  width: 400px;
-  height: 600px;
-  padding: 16px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 12px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-input {
-  display: block;
-  padding: 8px 16px;
+.inputGroup input {
+  font-size: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.8em;
+  outline: none;
+  border: 1px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 10px;
   width: 100%;
-  border-radius: 6px;
-  margin: 16px 0px;
+  transition: border 0.3s ease;
 }
 
-.divider {
-  display: flex;
-  align-items: center;
-  text-align: center;
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
 }
 
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px solid #ccc;
-  margin: 0 10px;
+.inputGroup input:focus ~ label,
+.inputGroup input:valid ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: white;
+  color: #586cc8;
 }
 
-.divider span {
-  font-size: 14px;
-  color: #666;
+.inputGroup input:focus,
+.inputGroup input:valid {
+  border: 1px solid #586cc8;
+  box-shadow: 0 0 3px #586cc8;
 }
 
-button {
-  width: 100%;
-  padding: 8px 16px;
-  margin: 12px 8px;
+.inputGroup input[data-invalid="true"] ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: white;
+  color: red;
 }
