@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 49: Sidebar Navigation</title>
+    <style></style>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <div class="header">
+        <div class="logo-container">
+          <div class="logo"></div>
+          <span class="nav-text">Rose Way</span>
+        </div>
+        <button class="menu-toggle">☰</button>
+      </div>
+
+      <div class="nav-links">
+        <a class="nav-item active">
+          <i>⊞</i>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a class="nav-item">
+          <i>🏷️</i>
+          <span class="nav-text">Tag List</span>
+        </a>
+        <a class="nav-item">
+          <i>📝</i>
+          <span class="nav-text">Define Subject</span>
+        </a>
+        <a class="nav-item">
+          <i>👥</i>
+          <span class="nav-text">Members</span>
+        </a>
+        <a class="nav-item">
+          <i>🏷️</i>
+          <span class="nav-text">Tags Assignment</span>
+        </a>
+        <a class="nav-item">
+          <i>📚</i>
+          <span class="nav-text">Library</span>
+        </a>
+        <a class="nav-item">
+          <i>📧</i>
+          <span class="nav-text">Emails</span>
+        </a>
+      </div>
+
+      <div class="user">
+        <div class="user-avatar"></div>
+        <span class="nav-text">Lily Chen</span>
+      </div>
+
+      <a class="nav-item">
+        <i>🔔</i>
+        <span class="nav-text">Notifications</span>
+      </a>
+
+      <div class="plan-info">
+        <div>90 days left</div>
+        <div class="plan-text">Select a plan</div>
+      </div>
+    </nav>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const menuToggle = document.querySelector(".menu-toggle");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("collapsed");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 48: Markdow post</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="comment-container">
+      <div class="mentions-container">
+        <textarea class="comment-input" placeholder="Comment a post"></textarea>
+        <div class="mentions-dropdown" id="mentions"></div>
+      </div>
+      <div class="toolbar">
+        <div class="format-buttons">
+          <button class="format-button bold" onclick="applyFormatting('bold')">
+            B
+          </button>
+          <button
+            class="format-button italic"
+            onclick="applyFormatting('italic')"
+          >
+            I
+          </button>
+          <button
+            class="format-button underline"
+            onclick="applyFormatting('underline')"
+          >
+            U
+          </button>
+        </div>
+        <button class="post-button">Post a message</button>
+      </div>
+    </div>
+
+    <script>
+      const textarea = document.querySelector(".comment-input");
+      const mentionsDropdown = document.querySelector(".mentions-dropdown");
+
+      const users = [
+        { id: 1, name: "Jerry Spencer", avatar: "👤" },
+        { id: 2, name: "Jensen Bolt", avatar: "👤" },
+        { id: 3, name: "Jessica Wilson", avatar: "👤" },
+      ];
+
+      textarea.addEventListener("input", (e) => {
+        const text = e.target.value;
+        const lastChar = text[text.length - 1];
+
+        if (lastChar === "@") {
+          showMentions();
+        } else if (mentionsDropdown.style.display === "block") {
+          const atIndex = text.lastIndexOf("@");
+          if (atIndex >= 0) {
+            const query = text.slice(atIndex + 1).toLowerCase();
+            filterMentions(query);
+          } else {
+            hideMentions();
+          }
+        }
+      });
+
+      function showMentions() {
+        mentionsDropdown.style.display = "block";
+        mentionsDropdown.innerHTML = users
+          .map(
+            (user) => `
+                <div class="mention-item" onclick="insertMention('${user.name}')">
+                    <span>${user.avatar}</span>
+                    <span>${user.name}</span>
+                </div>
+            `
+          )
+          .join("");
+      }
+
+      function filterMentions(query) {
+        const filtered = users.filter((user) =>
+          user.name.toLowerCase().includes(query)
+        );
+
+        mentionsDropdown.innerHTML = filtered
+          .map(
+            (user) => `
+                <div class="mention-item" onclick="insertMention('${user.name}')">
+                    <span>${user.avatar}</span>
+                    <span>${user.name}</span>
+                </div>
+            `
+          )
+          .join("");
+
+        if (filtered.length === 0) {
+          hideMentions();
+        }
+      }
+
+      function hideMentions() {
+        mentionsDropdown.style.display = "none";
+      }
+
+      function insertMention(username) {
+        const text = textarea.value;
+        const atIndex = text.lastIndexOf("@");
+        textarea.value = text.slice(0, atIndex) + "@" + username + " ";
+        hideMentions();
+        textarea.focus();
+      }
+
+      function applyFormatting(type) {
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const text = textarea.value;
+        const selectedText = text.substring(start, end);
+
+        let formattedText;
+        switch (type) {
+          case "bold":
+            formattedText = `**${selectedText}**`;
+            break;
+          case "italic":
+            formattedText = `*${selectedText}*`;
+            break;
+          case "underline":
+            formattedText = `_${selectedText}_`;
+            break;
+        }
+
+        textarea.value =
+          text.substring(0, start) + formattedText + text.substring(end);
+        textarea.focus();
+      }
+
+      // Close mentions dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".mentions-container")) {
+          hideMentions();
+        }
+      });
+    </script>
+  </body>
+</html>

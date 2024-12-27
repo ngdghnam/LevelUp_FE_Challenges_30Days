@@ -3,17 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 30: Invoices</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 30: Invoice Dashboard</title>
+    <style></style>
   </head>
   <body>
-    <div class="wrapper">
-      <!-- so du -->
-      <div class="total-container">
-        <div class="money-container balance"></div>
-        <div class="money-container balance"></div>
+    <div class="container">
+      <div class="balance-cards">
+        <div class="balance-card">
+          <div class="card-label">Balance</div>
+          <div class="balance-amount">
+            $ 10,234<span class="balance-cents">.40</span>
+          </div>
+        </div>
+        <div class="balance-card dark">
+          <div class="card-label">Pending</div>
+          <div class="balance-amount">
+            $ 24,497<span class="balance-cents">.13</span>
+          </div>
+        </div>
       </div>
-      <!-- Chi tiet -->
-      <div class="detailed-container"></div>
+
+      <div class="invoice-section">
+        <div class="invoice-header">
+          <h2 class="header-title">Invoices</h2>
+          <div class="header-actions">
+            <button class="btn btn-outline">View all Invoices</button>
+            <button class="btn btn-primary">+ New Invoice</button>
+          </div>
+        </div>
+
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th><input type="checkbox" class="checkbox" /></th>
+              <th>INVOICE</th>
+              <th>CLIENT</th>
+              <th>AMOUNT</th>
+              <th>STATUS</th>
+              <th>DATE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" class="checkbox" checked /></td>
+              <td class="invoice-id">#Mraz-Sons 402</td>
+              <td>Mraz and Sons</td>
+              <td>$3.120,98</td>
+              <td><span class="status-badge status-paid">Paid</span></td>
+              <td>24 February 2024</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox" /></td>
+              <td class="invoice-id">#Stokes LLC 02</td>
+              <td>Stokes LLC</td>
+              <td>$1.327,80</td>
+              <td><span class="status-badge status-paid">Paid</span></td>
+              <td>21 February 2024</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox" /></td>
+              <td class="invoice-id">#BBP 16</td>
+              <td>Bergnaum, Blick and Pagac</td>
+              <td>$2.700,31</td>
+              <td>
+                <span class="status-badge status-outstanding">Outstanding</span>
+              </td>
+              <td>18 February 2024</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox" /></td>
+              <td class="invoice-id">#Bash-Grim 01</td>
+              <td>Bashirian-Grimes</td>
+              <td>$4.219,58</td>
+              <td><span class="status-badge status-overdue">Overdue</span></td>
+              <td>17 February 2024</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="checkbox" /></td>
+              <td class="invoice-id">#McC-Schinner 09</td>
+              <td>McCullough-Schinner</td>
+              <td>$3.230,74</td>
+              <td><span class="status-badge status-overdue">Overdue</span></td>
+              <td>16 February 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </body>
 </html>

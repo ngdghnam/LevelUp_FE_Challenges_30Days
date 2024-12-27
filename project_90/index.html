@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 90: Device Manager</title>
+  </head>
+  <body>
+    <!-- Devices List Card -->
+    <div class="card">
+      <h2 class="title">My devices</h2>
+      <div class="device-list">
+        <div class="device-item">
+          <img src="./thumbnail1.jpg" alt="AirPods" class="device-icon" />
+          <div class="device-info">
+            <div class="device-name">APPLE AirPods Pro II</div>
+            <div class="device-status">
+              Connected
+              <div class="battery-indicator">
+                <div class="battery-level"></div>
+              </div>
+              80%
+            </div>
+          </div>
+          <button class="device-button connected-btn">Connected</button>
+        </div>
+
+        <div class="device-item">
+          <img src="./thumbnail1.jpg" alt="AirPods Max" class="device-icon" />
+          <div class="device-info">
+            <div class="device-name">APPLE Airpods Max</div>
+            <div class="device-status">Not connected</div>
+          </div>
+          <button class="device-button connect-btn">Connect</button>
+        </div>
+      </div>
+      <button class="add-device-btn">+ Add new device</button>
+    </div>
+
+    <!-- Device Details Card -->
+    <div class="card detail-card">
+      <div class="header">
+        <button class="back-btn">←</button>
+        <div class="title">APPLE AirPods Pro II</div>
+        <button class="settings-btn">⚙️</button>
+      </div>
+
+      <div class="device-preview">
+        <img src="./thumbnail1.jpg" alt="AirPods Pro" />
+        <div class="device-status">
+          Connected ·
+          <div class="battery-indicator"><div class="battery-level"></div></div>
+          80%
+        </div>
+      </div>
+
+      <div class="settings-menu">
+        <div class="menu-item">🚫 Forget this device</div>
+        <div class="menu-item">⏏️ Disconnect</div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">Name</div>
+          <div class="info-value">APPLE Airpods Max</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Device Type</div>
+          <div class="info-value">Headphones</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Version</div>
+          <div class="info-value">1.2</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Updates</div>
+          <div class="info-value">Up to date</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const settingsBtn = document.querySelector(".settings-btn");
+      const settingsMenu = document.querySelector(".settings-menu");
+
+      settingsBtn.addEventListener("click", () => {
+        settingsMenu.style.display =
+          settingsMenu.style.display === "none" ? "block" : "none";
+      });
+
+      // Initially hide the menu
+      settingsMenu.style.display = "none";
+    </script>
+  </body>
+</html>
