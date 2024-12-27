@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 53: Billing Page</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="menu-item active">Plan</div>
+      <div class="menu-item">Payment method</div>
+      <div class="menu-item">Billing history</div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>Plan</h2>
+        <div class="subtitle">Decide what is best for you</div>
+        <div class="plans">
+          <div class="plan-card active">
+            <div class="info-badge">i</div>
+            <div class="plan-header">
+              <h3>Standard</h3>
+              <span class="price">$29.99/month</span>
+            </div>
+            <button class="btn btn-outline">Cancel Subscription</button>
+          </div>
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>Ultimate</h3>
+              <span class="price">$49.99/month</span>
+            </div>
+            <button class="btn btn-primary">Upgrade</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Payment Method</h2>
+        <div class="subtitle">Update your billing</div>
+        <div class="payment-methods">
+          <div class="payment-card active">
+            <div class="card-icon"></div>
+            <span>**** **** **** 2361</span>
+          </div>
+          <div class="payment-card">
+            <button class="btn btn-outline">+ Add new</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Billing History</h2>
+        <div class="subtitle">Access to all your previous invoices</div>
+        <table class="billing-table">
+          <thead>
+            <tr>
+              <th>DATE</th>
+              <th>DETAILS</th>
+              <th>AMOUNT</th>
+              <th>OPERATION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>04/12/2023</td>
+              <td>Standard Plan</td>
+              <td>$29.99</td>
+              <td>
+                <div class="actions">
+                  <button class="action-btn">👁️</button>
+                  <button class="action-btn">⬇️</button>
+                  <button class="action-btn">📧</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".menu-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          document
+            .querySelectorAll(".menu-item")
+            .forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+
+      document.querySelectorAll(".payment-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          if (!card.querySelector(".btn")) {
+            document
+              .querySelectorAll(".payment-card")
+              .forEach((c) => c.classList.remove("active"));
+            card.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

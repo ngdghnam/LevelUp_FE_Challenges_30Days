@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 25: Calendar</title>
+  </head>
+  <body>
+    <div class="calendar-card">
+      <div class="calendar-header">
+        <div class="calendar-title">
+          <span>Calendar</span>
+          <h2>February 2024</h2>
+        </div>
+        <div class="calendar-nav">
+          <button class="nav-btn">←</button>
+          <button class="nav-btn">→</button>
+        </div>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-header">M</div>
+        <div class="day-header">T</div>
+        <div class="day-header">W</div>
+        <div class="day-header">T</div>
+        <div class="day-header">F</div>
+        <div class="day-header">S</div>
+        <div class="day-header">S</div>
+      </div>
+      <div class="calendar-grid">
+        <div class="day other-month">29</div>
+        <div class="day other-month">30</div>
+        <div class="day other-month">31</div>
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day active">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day other-month">1</div>
+        <div class="day other-month">2</div>
+        <div class="day other-month">3</div>
+      </div>
+    </div>
+
+    <div class="add-meeting">
+      <h2>Add meeting</h2>
+      <div class="form-group">
+        <input type="text" placeholder="Enter the title" />
+      </div>
+      <div class="form-group">
+        <input type="text" value="Friday, 23 February 2024" readonly />
+      </div>
+      <div class="time-inputs">
+        <div class="form-group">
+          <input type="text" value="2:00 PM" readonly />
+        </div>
+        <div class="form-group">
+          <input type="text" value="3:00 PM" readonly />
+        </div>
+      </div>
+      <button class="save-btn">Save</button>
+    </div>
+
+    <div class="events-card">
+      <h2>Today</h2>
+      <div class="event">
+        <div class="event-marker done"></div>
+        <div class="event-details">
+          <div>Weekly Plant Care Workshop</div>
+          <div class="event-time">10:00 AM - 11:00 AM</div>
+        </div>
+        <span class="event-status status-done">Done</span>
+      </div>
+      <div class="event">
+        <div class="event-marker progress"></div>
+        <div class="event-details">
+          <div>Succulent Succulents Seminar</div>
+          <div class="event-time">1:00 PM - 1:30 PM</div>
+        </div>
+        <span class="event-status status-progress">In progress</span>
+      </div>
+      <div class="event">
+        <div class="event-marker upcoming"></div>
+        <div class="event-details">
+          <div>Monthly Plant Swap</div>
+          <div class="event-time">2:00 PM - 3:00 PM</div>
+        </div>
+        <span class="event-status status-upcoming">Not started</span>
+      </div>
+    </div>
+
+    <button class="add-btn">+</button>
+
+    <div class="time-picker">
+      <div class="time-picker-header">
+        <button>Cancel</button>
+        <button>Done</button>
+      </div>
+      <div class="time-picker-grid">
+        <div>
+          <div class="time-value">10</div>
+          <div class="time-unit">Hour</div>
+        </div>
+        <div>
+          <div class="time-value">59</div>
+          <div class="time-unit">Minute</div>
+        </div>
+        <div>
+          <div class="time-value">11</div>
+          <div class="time-unit">Hour</div>
+        </div>
+        <div>
+          <div class="time-value">00</div>
+          <div class="time-unit">Minute</div>
+        </div>
+        <div>
+          <div class="time-value">12</div>
+          <div class="time-unit">Hour</div>
+        </div>
+        <div>
+          <div class="time-value">01</div>
+          <div class="time-unit">Minute</div>
+        </div>
+        <div>
+          <div class="time-value">01</div>
+          <div class="time-unit">Hour</div>
+        </div>
+        <div>
+          <div class="time-value">02</div>
+          <div class="time-unit">Minute</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".day").forEach((day) => {
+        day.addEventListener("click", () => {
+          document
+            .querySelectorAll(".day")
+            .forEach((d) => d.classList.remove("active"));
+          day.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
