@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #dbddec;
+}
+
+.app {
+  border-radius: 12px;
+  padding: 12px;
+  width: 360px;
+  height: 600px;
+  background-color: #0f0f45;
+  color: #fff;
+}
