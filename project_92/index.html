@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Project 92: Search Filters</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="app">
+        <div class="row space-btw my-8">
+          <h2 class="title">Filters</h2>
+          <button class="clear-btn">Clear all</button>
+        </div>
+
+        <div class="row my-16">
+          <div class="choose-container align-center justify-center w-100 flex">
+            <div class="type text-center align-center justify-center flex">
+              rent
+            </div>
+            <div class="type text-center align-center justify-center flex">
+              sale
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-16 postion-relative">
+          <input
+            type="text"
+            class="w-100 h-40 border-8"
+            placeholder="Enter a search location"
+          />
+          <div class="distance-chose">
+            <div class="distance h-40">
+              <select name="" id="" class="h-40 border-8">
+                <option value="0 miles">0 miles</option>
+                <option value="1 miles">1 miles</option>
+                <option value="2 miles">2 miles</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-8">
+          <div class="row w-100 space-btw my-8 px-4">
+            <p class="price-desc px-4">price</p>
+            <p class="price">$20.000 - $130.000</p>
+          </div>
+
+          <div class="row w-100">
+            <input type="range" class="w-100 border-8" />
+          </div>
+
+          <div class="row w-100 space-btw my-8 px-4">
+            <p class="price">$0</p>
+            <p class="price">No. Max</p>
+          </div>
+        </div>
+
+        <div class="row my-16">
+          <p class="price-desc px-4 px-4">Property type</p>
+          <div class="row gap-8">
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              house
+            </div>
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              house
+            </div>
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              penthouse
+            </div>
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              townhouses
+            </div>
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              apartment
+            </div>
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              condominiums
+            </div>
+            <div class="house-type my-8 mx-8 border-8 line-height-1-4">
+              apartment
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-16">
+          <div class="row my-8 w-100 space-btw">
+            <p class="price-desc px-4">property size</p>
+            <p class="price">$20.000 - $130.000</p>
+          </div>
+
+          <div class="row">
+            <input type="range" class="border-8 w-100" />
+          </div>
+
+          <div class="row w-100 space-btw px-4 my-8">
+            <p class="price">$ 0</p>
+            <p class="price">No. Max</p>
+          </div>
+        </div>
+
+        <div class="row my-16">
+          <button class="show-res w-100 text-center my-8 border-8">
+            Show results
+          </button>
+        </div>
+        <!-- end -->
+      </div>
+    </div>
+
+    <div class="search-container">
+      <h2 class="search-title">Search Results</h2>
+
+      <div class="property-card">
+        <img src="./img1.jpg" alt="Property" class="property-image" />
+        <div class="property-details">
+          <div class="desc-price">$130,000</div>
+          <div class="features">
+            <div class="feature">
+              <svg
+                class="feature-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+              2 Beds
+            </div>
+            <div class="feature">
+              <svg
+                class="feature-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"
+                />
+              </svg>
+              2 Bath
+            </div>
+            <div class="feature">
+              <svg
+                class="feature-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                />
+              </svg>
+              90m²
+            </div>
+          </div>
+          <div class="address">215 McKinley Avenue, Denver, CO 80203</div>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img src="./img1.jpg" alt="Property" class="property-image" />
+        <div class="property-details">
+          <div class="desc-price">$90,000</div>
+          <div class="features">
+            <div class="feature">
+              <svg
+                class="feature-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+              2 Beds
+            </div>
+            <div class="feature">
+              <svg
+                class="feature-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"
+                />
+              </svg>
+              1 Bath
+            </div>
+            <div class="feature">
+              <svg
+                class="feature-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                />
+              </svg>
+              60m²
+            </div>
+          </div>
+          <div class="address">1041 Elk City Road, Indianapolis, IN 46205</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

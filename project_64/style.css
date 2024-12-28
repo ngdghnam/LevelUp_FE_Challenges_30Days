@@ -1,0 +1,156 @@
+:root {
+  --purple: #9333ea;
+  --red: #dc2626;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 24px;
+  background: #f5f3ff;
+}
+
+.editor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.editor-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+}
+
+.btn-purple {
+  background: var(--purple);
+  color: white;
+}
+
+.btn-red {
+  background: var(--red);
+  color: white;
+}
+
+.editor-content {
+  display: flex;
+  height: calc(100vh - 150px);
+}
+
+.sidebar {
+  width: 280px;
+  border-right: 1px solid var(--gray-200);
+  overflow-y: auto;
+}
+
+.document-info {
+  padding: 16px;
+  border-bottom: 1px solid var(--gray-200);
+  cursor: pointer;
+}
+
+.document-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 4px;
+}
+
+.document-stats {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.chapter {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.chapter.active {
+  background: #f5f3ff;
+}
+
+.chapter-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 4px;
+}
+
+.word-count {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.new-document-btn {
+  margin: 16px;
+  width: calc(100% - 32px);
+  padding: 8px;
+  background: var(--purple);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.content-area {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.chapter-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.edit-icon {
+  color: var(--gray-400);
+  cursor: pointer;
+}
+
+.content-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-600);
+}

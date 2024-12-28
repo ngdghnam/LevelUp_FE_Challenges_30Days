@@ -4,48 +4,171 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
     <title>Project 26: Job Board</title>
   </head>
   <body>
-    <div class="board-container">
-      <!-- Find job and board -->
-      <div class="find-info-container">
-        <div class="find-job-container">
-          <!-- Filter -->
-          <div class="search-job">
-            <div class="search-job-form">
-              <input type="text" placeholder="Find a job" />
-              <button class="location-find-btn">Localization</button>
+    <div class="search-container">
+      <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Find a job" />
+        <button class="location-button">📍 Localization</button>
+        <button class="search-button">Search</button>
+      </div>
+
+      <div class="search-results">
+        <div class="job-card">
+          <div class="company-header">
+            <div class="company-logo"></div>
+            <div class="company-info">
+              <h3>Backend .Net Developer</h3>
+              <p>Netflix</p>
             </div>
-            <!-- Search Button -->
-            <button class="search-btn">Search</button>
+          </div>
+          <div class="skills">
+            <span class="skill-tag">Fullstack</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">C#</span>
+          </div>
+          <div class="job-meta">
+            <div class="salary">💰 $13k/month</div>
+            <div class="time">8 mins ago</div>
           </div>
         </div>
-        <!-- Board -->
-        <div class="job-board-container">
-          <!-- Thumbnail -->
-          <div class="thumbnail">
-            <h1 class="thumbnail-title">Search Results</h1>
-            <p class="thumbnail-desc">1.100 results found</p>
+
+        <!-- More job cards can be added here -->
+        <div class="job-card">
+          <div class="company-header">
+            <div class="company-logo"></div>
+            <div class="company-info">
+              <h3>Backend .Net Developer</h3>
+              <p>Netflix</p>
+            </div>
           </div>
-          <!-- card -->
-          <div class="job-card-container">
-            <!-- Card -->
-            <div class="job-card"></div>
+          <div class="skills">
+            <span class="skill-tag">Fullstack</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">C#</span>
+          </div>
+          <div class="job-meta">
+            <div class="salary">💰 $13k/month</div>
+            <div class="time">8 mins ago</div>
+          </div>
+        </div>
+
+        <div class="job-card">
+          <div class="company-header">
+            <div class="company-logo"></div>
+            <div class="company-info">
+              <h3>Backend .Net Developer</h3>
+              <p>Netflix</p>
+            </div>
+          </div>
+          <div class="skills">
+            <span class="skill-tag">Fullstack</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">C#</span>
+          </div>
+          <div class="job-meta">
+            <div class="salary">💰 $13k/month</div>
+            <div class="time">8 mins ago</div>
+          </div>
+        </div>
+
+        <div class="job-card">
+          <div class="company-header">
+            <div class="company-logo"></div>
+            <div class="company-info">
+              <h3>Backend .Net Developer</h3>
+              <p>Netflix</p>
+            </div>
+          </div>
+          <div class="skills">
+            <span class="skill-tag">Fullstack</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">C#</span>
+          </div>
+          <div class="job-meta">
+            <div class="salary">💰 $13k/month</div>
+            <div class="time">8 mins ago</div>
+          </div>
+        </div>
+
+        <div class="job-card">
+          <div class="company-header">
+            <div class="company-logo"></div>
+            <div class="company-info">
+              <h3>Backend .Net Developer</h3>
+              <p>Netflix</p>
+            </div>
+          </div>
+          <div class="skills">
+            <span class="skill-tag">Fullstack</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">C#</span>
+          </div>
+          <div class="job-meta">
+            <div class="salary">💰 $13k/month</div>
+            <div class="time">8 mins ago</div>
+          </div>
+        </div>
+
+        <div class="job-card">
+          <div class="company-header">
+            <div class="company-logo"></div>
+            <div class="company-info">
+              <h3>Backend .Net Developer</h3>
+              <p>Netflix</p>
+            </div>
+          </div>
+          <div class="skills">
+            <span class="skill-tag">Fullstack</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">C#</span>
+          </div>
+          <div class="job-meta">
+            <div class="salary">💰 $13k/month</div>
+            <div class="time">8 mins ago</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Detailed -->
-      <div class="detailed-container"></div>
+    <div class="detailed-container">
+      <div class="detailed-company-header">
+        <div class="detailed-company-logo"></div>
+        <div>
+          <h1 class="detailed-job-title">Backend .Net Developer</h1>
+          <p class="detailed-company-name">Netflix</p>
+        </div>
+      </div>
+
+      <span class="detailed-applicants">+100 Applicants</span>
+
+      <h2 class="detailed-section-title">Description</h2>
+      <p class="detailed-description">
+        Netflix is seeking a highly skilled and motivated Backend .NET Developer
+        to join our talented engineering team. As a Backend .NET Developer, you
+        will play a crucial role...
+        <a href="#" class="read-more">read more</a>
+      </p>
+
+      <h2 class="detailed-section-title">Skills</h2>
+      <div class="detailed-skills">
+        <span class="skill-tag">Fullstack</span>
+        <span class="skill-tag">Angular</span>
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">C#</span>
+      </div>
+
+      <h2 class="detailed-section-title">Based salary</h2>
+      <p class="detailed-salary">$13k/month</p>
+
+      <button class="apply-button">Apply Now</button>
     </div>
   </body>
 </html>
