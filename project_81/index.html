@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 81: Mailbox</title>
+  </head>
+  <body>
+    <div class="mail-container">
+      <div class="sidebar">
+        <button class="compose-btn">+ Compose Mail</button>
+        <div class="sidebar-item">📥 Inbox <span>242</span></div>
+        <div class="sidebar-item">⭐ Starred <span>11</span></div>
+        <div class="sidebar-item">⏰ Snoozed <span>2</span></div>
+        <div class="sidebar-item">🚫 Spam <span>6</span></div>
+        <div class="sidebar-item">📤 Send <span>38</span></div>
+        <div class="sidebar-item">🗑️ Deleted <span>19</span></div>
+      </div>
+      <div class="main-content">
+        <h2>Inbox</h2>
+        <p style="color: #888; margin-bottom: 20px">242 messages</p>
+        <input type="text" class="search-bar" placeholder="🔍 Search" />
+
+        <div class="mail-item">
+          <div class="mail-header">
+            <span>James Morrison</span>
+            <span class="mail-date">4 Apr • 11:43AM</span>
+          </div>
+          <div class="mail-title">
+            Action Required: Expense Report Submission
+          </div>
+          <div class="mail-preview">
+            Dear Team, This is a friendly reminder to submit your expense
+            reports for the previous month by the end of this week. It's crucial
+            for our...
+          </div>
+        </div>
+
+        <div class="mail-item">
+          <div class="mail-header">
+            <span>Suzanne Marie</span>
+            <span class="mail-date">2 Apr • 5:25PM</span>
+          </div>
+          <div class="mail-title">Meeting Reminder: Monthly Team Review</div>
+          <div class="mail-preview">
+            Hi Team, Just a quick reminder that our monthly team review meeting
+            is scheduled for tomorrow at 10:00 AM in the conference room...
+          </div>
+        </div>
+
+        <!-- Additional mail items can be added here -->
+      </div>
+    </div>
+  </body>
+</html>

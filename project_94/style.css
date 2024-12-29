@@ -1,0 +1,121 @@
+body {
+  font-family: sans-serif;
+  background-color: #e1bee7;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.widget-tabs {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 5px;
+}
+.tab-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.tab-button.active {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+.tab-button img {
+  width: 20px;
+  height: 20px;
+}
+.widget-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.widget-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.restart-button {
+  background-color: transparent;
+  border: none;
+  color: #e57373;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.timer-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer-ring {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.ring-background {
+  stroke: #eee;
+}
+.ring-progress {
+  stroke: #ba68c8;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.time-display {
+  position: absolute;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.control-button img {
+  width: 20px;
+  height: 20px;
+}
+.add-minute-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

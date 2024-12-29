@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #f8f7ff;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.add-button {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-button::before {
+  content: "+";
+  font-size: 1.2rem;
+}
+
+.customer-list {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 40px 2fr 1.5fr 1fr 1fr 1fr 40px;
+  padding: 16px;
+  background-color: #f8f7ff;
+  font-weight: 500;
+  color: #666;
+}
+
+.customer-row {
+  display: grid;
+  grid-template-columns: 40px 2fr 1.5fr 1fr 1fr 1fr 40px;
+  padding: 16px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.customer-row:hover {
+  background-color: #f8f7ff;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: white;
+}
+
+.customer-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.customer-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-name {
+  font-weight: 500;
+}
+
+.customer-email {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+
+.status-active {
+  background-color: #e6fff0;
+  color: #00b341;
+}
+
+.status-inactive {
+  background-color: #ffe6e6;
+  color: #ff4d4d;
+}
+
+.actions {
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}

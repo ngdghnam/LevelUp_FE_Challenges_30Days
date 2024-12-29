@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Workspace</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Create a workspace</h1>
+      <div class="container">
+        <div class="setup-workspace-card">
+          <h2>Setup workspace</h2>
+          <div class="form-group">
+            <label for="workspace-name">Workspace name*</label>
+            <input type="text" id="workspace-name" value="My workspace" />
+          </div>
+          <div class="form-group">
+            <label for="select-industry">Select your industry</label>
+            <div class="select-container">
+              <div class="select-placeholder">Select your industry</div>
+              <div class="select-arrow"></div>
+            </div>
+          </div>
+
+          <div class="add-members-container">
+            <div class="add-members-header">
+              <h3>Add a workspace members</h3>
+              <span>1/5</span>
+            </div>
+
+            <div class="member-email">
+              <input type="text" value="user2.name@email.com" />
+              <button class="remove-input">X</button>
+              <button class="invite-button">invite</button>
+            </div>
+
+            <div class="member-preview">
+              <div class="member-info">
+                <img src="./imgs/avt.jpg" alt="user icon" class="user-icon" />
+                <div class="member-details">
+                  <div class="member-name">User Name</div>
+                  <div class="member-email-text">user.name@email.com</div>
+                </div>
+              </div>
+              <div class="member-options"></div>
+            </div>
+          </div>
+          <button class="setup-workspace-button">Setup workspace</button>
+        </div>
+
+        <div class="select-industry-card">
+          <h2>Select your industry</h2>
+          <div class="industry-dropdown">
+            <div class="industry-list">
+              <div class="industry-item">Technology</div>
+              <div class="industry-item">Finance</div>
+              <div class="industry-item">Design</div>
+              <div class="industry-item">Manufacturing</div>
+              <div class="industry-item">Education</div>
+            </div>
+          </div>
+          <div class="preview-user">
+            <div class="member-info">
+              <img src="./imgs/avt.jpg" alt="user icon" class="user-icon" />
+              <div class="member-details">
+                <div class="member-name">User Name</div>
+                <div class="member-email-text">user.name@email.com</div>
+              </div>
+            </div>
+            <div class="member-options-dropdown">
+              <div class="options-list">
+                <div class="options-item">Resend invitation</div>
+                <div class="options-item">Remove</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

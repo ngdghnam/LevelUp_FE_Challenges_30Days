@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #f8f5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.mail-container {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #333;
+}
+
+.compose-btn {
+  background-color: #8957ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 4px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: #333;
+}
+
+.sidebar-item span {
+  margin-left: auto;
+  color: #888;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.search-bar {
+  background-color: #2a2a2a;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mail-item {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #2a2a2a;
+}
+
+.mail-item:hover {
+  background-color: #333;
+}
+
+.mail-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mail-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.mail-preview {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.mail-date {
+  color: #888;
+  font-size: 0.8em;
+}
+
+.star-icon {
+  color: #ffd700;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mail-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+}
