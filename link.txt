@@ -7,3 +7,4 @@ SVG: https://www.svgrepo.com/
 text-gradient: https://gradient.page/css/text-gradient
 hex-to-rgba: https://rgbacolorpicker.com/hex-to-rgba
 the-odin-project: https://www.theodinproject.com/
+image-map: https://www.image-map.net/
