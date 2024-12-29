@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 77: Integrations Dashboard</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title-section">
+          <h1>Integrations</h1>
+          <div class="subtitle">Connect all your tools for best results</div>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+
+      <div class="categories">
+        <div class="category active">All Apps</div>
+        <div class="category">Mails</div>
+        <div class="category">Communication</div>
+        <div class="category">Productivity</div>
+        <div class="category">Finance</div>
+        <div class="category">File Management</div>
+      </div>
+
+      <div class="integrations-grid">
+        <div class="integration-card active">
+          <div class="card-header">
+            <div class="app-icon" style="background: #7c3aed; color: white">
+              S
+            </div>
+            <div class="toggle-switch active"></div>
+          </div>
+          <div class="card-content">
+            <h3>Stripe</h3>
+            <p>
+              Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <div class="integration-card">
+          <div class="card-header">
+            <div class="app-icon" style="background: #ea4335; color: white">
+              G
+            </div>
+            <div class="toggle-switch"></div>
+          </div>
+          <div class="card-content">
+            <h3>Gmail</h3>
+            <p>
+              Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <div class="integration-card">
+          <div class="card-header">
+            <div class="app-icon" style="background: #ea4335; color: white">
+              G
+            </div>
+            <div class="toggle-switch"></div>
+          </div>
+          <div class="card-content">
+            <h3>Gmail</h3>
+            <p>
+              Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <div class="integration-card">
+          <div class="card-header">
+            <div class="app-icon" style="background: #ea4335; color: white">
+              G
+            </div>
+            <div class="toggle-switch"></div>
+          </div>
+          <div class="card-content">
+            <h3>Gmail</h3>
+            <p>
+              Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <div class="integration-card">
+          <div class="card-header">
+            <div class="app-icon" style="background: #ea4335; color: white">
+              G
+            </div>
+            <div class="toggle-switch"></div>
+          </div>
+          <div class="card-content">
+            <h3>Gmail</h3>
+            <p>
+              Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <div class="integration-card">
+          <div class="card-header">
+            <div class="app-icon" style="background: #ea4335; color: white">
+              G
+            </div>
+            <div class="toggle-switch"></div>
+          </div>
+          <div class="card-content">
+            <h3>Gmail</h3>
+            <p>
+              Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toggle switch functionality
+      document.querySelectorAll(".toggle-switch").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          toggle.classList.toggle("active");
+          // Toggle the active class on the parent card
+          toggle.closest(".integration-card").classList.toggle("active");
+        });
+      });
+
+      // Category selection
+      document.querySelectorAll(".category").forEach((category) => {
+        category.addEventListener("click", () => {
+          document.querySelector(".category.active").classList.remove("active");
+          category.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

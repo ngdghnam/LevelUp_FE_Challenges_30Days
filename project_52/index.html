@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 52: Create Task</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="title">Create a Task</div>
+
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="input" placeholder="Input" />
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <div class="input date-input">
+          <span>Thursday, 23 Mar 2024</span>
+          <span>📅</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Color</label>
+        <div class="color-options">
+          <div
+            class="color-option selected"
+            style="background-color: #7b68ee"
+          ></div>
+          <div class="color-option" style="background-color: #4caf50"></div>
+          <div class="color-option" style="background-color: #ffa500"></div>
+          <div class="color-option" style="background-color: #ff69b4"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Assigned to</label>
+        <div class="assigned-users">
+          <div class="user-tag">
+            <div class="user-avatar"></div>
+            Julie Wright
+            <span class="remove-user">×</span>
+          </div>
+          <div class="user-tag">
+            <div class="user-avatar"></div>
+            Connie Dietz
+            <span class="remove-user">×</span>
+          </div>
+          <div class="user-tag">
+            <div class="user-avatar"></div>
+            Richard Bright
+            <span class="remove-user">×</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Priority</label>
+        <div class="priority-dropdown" id="priorityDropdown">
+          <button class="priority-button" onclick="toggleDropdown()">
+            🔥 Medium
+          </button>
+          <div class="dropdown-content" style="display: none">
+            <div class="priority-option">🌟 Low</div>
+            <div class="priority-option">🔥 Medium</div>
+            <div class="priority-option">⚡ High</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-cancel">Cancel</button>
+        <button class="btn btn-save">Save Task</button>
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+        const dropdown = document.querySelector(".dropdown-content");
+        dropdown.style.display =
+          dropdown.style.display === "none" ? "block" : "none";
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".priority-dropdown")) {
+          document.querySelector(".dropdown-content").style.display = "none";
+        }
+      });
+
+      // Color selection
+      document.querySelectorAll(".color-option").forEach((option) => {
+        option.addEventListener("click", () => {
+          document
+            .querySelector(".color-option.selected")
+            .classList.remove("selected");
+          option.classList.add("selected");
+        });
+      });
+
+      // Remove user tags
+      document.querySelectorAll(".remove-user").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.closest(".user-tag").remove();
+        });
+      });
+    </script>
+  </body>
+</html>
