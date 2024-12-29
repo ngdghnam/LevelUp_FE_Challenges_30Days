@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 93: Task Manager</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="task-list">
+        <div class="avatar"></div>
+        <h2>Monday</h2>
+        <h3>27 May</h3>
+
+        <div class="calendar">
+          <div class="date active">
+            <span>Mon</span>
+            <span>27</span>
+          </div>
+          <div class="date inactive">
+            <span>Thu</span>
+            <span>28</span>
+          </div>
+          <div class="date inactive">
+            <span>Wed</span>
+            <span>29</span>
+          </div>
+          <div class="date inactive">
+            <span>Thu</span>
+            <span>30</span>
+          </div>
+          <div class="date inactive">
+            <span>Fri</span>
+            <span>31</span>
+          </div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-icon">🏥</div>
+          <div class="task-details">
+            <div>Doctor Appointment</div>
+            <div class="task-time">8:30am to 9:00am</div>
+          </div>
+          <div class="task-actions">
+            <span>📋</span>
+            <span>🗑️</span>
+          </div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-icon">👥</div>
+          <div class="task-details">
+            <div>Daily stand-up</div>
+            <div class="task-time">9:30am to 9:45am</div>
+          </div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-icon">💪</div>
+          <div class="task-details">
+            <div>Gym</div>
+            <div class="task-time">3:30pm to 5:15pm</div>
+          </div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-icon">🍽️</div>
+          <div class="task-details">
+            <div>Dinner with Ann</div>
+            <div class="task-time">7:00pm to 8:30pm</div>
+          </div>
+        </div>
+
+        <button class="btn">+ New Task</button>
+      </div>
+
+      <div class="new-task">
+        <div class="avatar"></div>
+        <h2>New Task</h2>
+
+        <div style="margin-top: 20px">
+          <label>Task name</label>
+          <input type="text" placeholder="Enter name" />
+        </div>
+
+        <div style="margin-top: 20px">
+          <div class="time-inputs">
+            <div style="flex: 1">
+              <label>Start time</label>
+              <input type="text" value="9:30" />
+            </div>
+            <div style="flex: 1">
+              <label>End time</label>
+              <input type="text" value="10:30" />
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px">
+          <label>Set Reminder</label>
+          <div class="reminder-options">
+            <button class="reminder-btn active">5 min before</button>
+            <button class="reminder-btn">15 min before</button>
+            <button class="reminder-btn">30 min before</button>
+          </div>
+        </div>
+
+        <button class="btn">Create Task</button>
+      </div>
+    </div>
+  </body>
+</html>
