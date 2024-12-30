@@ -11,8 +11,10 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e7c7c8;
 }
 
+.btn,
 button {
   border: none;
   cursor: pointer;
@@ -83,6 +85,10 @@ input {
   margin: 8px 0 !important;
 }
 
+.mb-12px {
+  margin-bottom: 12px !important;
+}
+
 .border-1px-333 {
   border: 1px solid #333 !important;
 }
@@ -92,7 +98,7 @@ input {
 }
 
 .app {
-  width: 500px;
+  width: 360px;
   min-height: 600px;
   border-radius: 16px;
   padding: 16px;
@@ -138,8 +144,24 @@ input {
   width: 50% !important;
 }
 
+.w-24px {
+  width: 24px !important;
+}
+
+.w-36px {
+  width: 36px !important;
+}
+
 .w-40px {
   width: 40px;
+}
+
+.w-200px {
+  width: 200px !important;
+}
+
+.w-300px {
+  width: 300px !important;
 }
 
 .w-400px {
@@ -148,6 +170,14 @@ input {
 
 .h-12px {
   height: 12px !important;
+}
+
+.h-20px {
+  height: 20px !important;
+}
+
+.h-24px {
+  height: 24px !important;
 }
 
 .h-36px {
@@ -166,6 +196,10 @@ input {
   height: 300px !important;
 }
 
+.h-200px {
+  height: 200px !important;
+}
+
 .h-400px {
   height: 400px !important;
 }
@@ -180,6 +214,10 @@ input {
 
 .h-50 {
   height: 50% !important;
+}
+
+.pt-1 {
+  padding-top: 1px !important;
 }
 
 .pt-4 {
@@ -204,6 +242,18 @@ input {
 
 .py-4 {
   padding: 4px 0 !important;
+}
+
+.p-8 {
+  padding: 8px !important;
+}
+
+.py-8 {
+  padding: 8px 0 !important;
+}
+
+.px-8 {
+  padding: 0 8px !important;
 }
 
 .border-8 {
@@ -274,6 +324,10 @@ input {
 .column {
   display: flex;
   flex-direction: column !important;
+}
+
+.flex-shrink-5 {
+  flex-shrink: 5px !important;
 }
 
 .gap-24 {
@@ -365,7 +419,8 @@ input {
 }
 
 .progress {
-  background-color: #f5f5f5;
+  background-color: #c9e6f0;
+  height: 12px;
 }
 
 .bar-64 {
@@ -410,4 +465,12 @@ input {
   width: 2px;
   height: 40px;
   background-color: #333;
+}
+
+.container {
+  background-color: #f5eced;
+}
+
+.bg-color-eb5b00 {
+  background-color: #eb5b00 !important;
 }
