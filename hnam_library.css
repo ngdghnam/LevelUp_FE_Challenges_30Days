@@ -92,13 +92,14 @@ input {
 }
 
 .app {
-  width: 720px;
+  width: 500px;
   min-height: 600px;
   border-radius: 16px;
   padding: 16px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .overflow-hidden {
@@ -135,6 +136,10 @@ input {
 
 .w-50 {
   width: 50% !important;
+}
+
+.w-40px {
+  width: 40px;
 }
 
 .w-400px {
@@ -175,6 +180,10 @@ input {
 
 .h-50 {
   height: 50% !important;
+}
+
+.pt-4 {
+  padding-top: 4px !important;
 }
 
 .px-16 {
@@ -327,6 +336,18 @@ input {
   color: #ccc !important;
 }
 
+.color-ddd {
+  color: #ddd !important;
+}
+
+.color-bcccdc {
+  color: #bcccdc !important;
+}
+
+.bg-color-ddd {
+  background-color: #ddd !important;
+}
+
 .w-40px {
   width: 40px !important;
 }
@@ -364,7 +385,29 @@ input {
   );
 }
 
+.border-radius-50 {
+  border-radius: 50% !important;
+}
+
 .tag {
   background-color: #ddd;
   padding: 4px 8px;
+}
+
+.bg-color-333 {
+  background-color: #333 !important;
+}
+
+.h-20px {
+  height: 20px !important;
+}
+
+.w-20px {
+  width: 20px !important;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 40px;
+  background-color: #333;
 }
