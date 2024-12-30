@@ -1,0 +1,212 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 460px; /* Adjust for your desired width */
+}
+.container.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.profile-settings {
+  padding: 20px;
+}
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.close-button {
+  cursor: pointer;
+}
+.nav-tabs {
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  font-weight: 500;
+}
+.tab-btn.active {
+  border-bottom-color: #4b3dff;
+  color: #4b3dff;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.user-details {
+}
+
+.profile-picture-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.profile-button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-button-group button {
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.change-pic-button {
+  background-color: #4b3dff;
+  color: #fff;
+}
+.delete-pic-button {
+  background-color: #eee;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical; /* allow vertical resizing */
+  min-height: 80px;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.char-count {
+  font-size: 0.8em;
+  text-align: right;
+  color: #888;
+}
+
+.button-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.button-area button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.cancel-button {
+  background-color: #eee;
+}
+
+.primary-button {
+  background-color: #4b3dff;
+  color: #fff;
+}
+
+/* Dark Mode styles */
+.container.dark-mode .nav-tabs {
+  border-bottom-color: #444;
+}
+.container.dark-mode .tab-btn {
+  color: #ccc;
+}
+.container.dark-mode .form-group label {
+  color: #ccc;
+}
+.container.dark-mode .form-group input,
+.container.dark-mode .form-group textarea {
+  background-color: #444;
+  border-color: #555;
+  color: #fff;
+}
+
+.container.dark-mode .profile-button-group button {
+  background-color: transparent;
+  color: #ddd;
+  border: 1px solid #555;
+}
+.container.dark-mode .profile-button-group .change-pic-button {
+  background-color: #4b3dff;
+  color: #fff;
+  border: none;
+}
+.container.dark-mode .delete-pic-button {
+  background-color: #333;
+  border: 1px solid #666;
+}
+
+.container.dark-mode .button-area .cancel-button {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #666;
+}
+
+/* Flex Grid for Name fields */
+.form-group:nth-child(3) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px; /*adjust this for gaps between elements */
+}
+.form-group:nth-child(3) > label:nth-child(1) {
+  grid-column: 1 / 1;
+}
+.form-group:nth-child(3) > input:nth-child(2) {
+  grid-column: 1 / 1;
+}
+.form-group:nth-child(3) > label:nth-child(3) {
+  grid-column: 2/ 2;
+}
+.form-group:nth-child(3) > input:nth-child(4) {
+  grid-column: 2 / 2;
+}

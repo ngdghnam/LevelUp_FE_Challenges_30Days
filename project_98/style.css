@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e7c7c8;
 }
 
 .btn,
@@ -104,7 +105,7 @@ input {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
   overflow: hidden;
-  background-color: #1f1f1f;
+  background-color: #fff;
 }
 
 .overflow-hidden {
@@ -472,4 +473,9 @@ input {
 
 .bg-color-eb5b00 {
   background-color: #eb5b00 !important;
+}
+
+.mic {
+  width: 100px;
+  height: 40px;
 }

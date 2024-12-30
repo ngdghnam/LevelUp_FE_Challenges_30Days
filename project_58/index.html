@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Creation Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Create a Task</h2>
+      <div class="input-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Input" />
+        <span class="count-indicator">56</span>
+      </div>
+      <div class="input-group">
+        <label for="date">Date</label>
+        <div class="date-input">
+          <input type="text" id="date" value="Thursday, 23 Mar 2024" />
+          <div class="icon-calendar"></div>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>Color</label>
+        <div class="color-options">
+          <div class="color-option purple"></div>
+          <div class="color-option green"></div>
+          <div class="color-option yellow selected"></div>
+          <div class="color-option pink"></div>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>Assigned to</label>
+        <div class="assigned-to-container">
+          <div class="assigned-user">
+            <img
+              src="https://randomuser.me/api/portraits/women/1.jpg"
+              alt="Julie Wright"
+            />
+            Julie Wright <span></span>
+          </div>
+          <div class="assigned-user">
+            <img
+              src="https://randomuser.me/api/portraits/women/2.jpg"
+              alt="Connie Dietz"
+            />
+            Connie Dietz <span></span>
+          </div>
+          <div class="assigned-user">
+            <img
+              src="https://randomuser.me/api/portraits/men/1.jpg"
+              alt="Richard Bright"
+            />
+            Richard Bright <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>Priority</label>
+        <div class="priority-dropdown">
+          <div class="priority-select">✋ Medium</div>
+          <div class="priority-options">
+            <div class="priority-option low">Low</div>
+            <div class="priority-option medium">Medium</div>
+            <div class="priority-option high">High</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="cancel">Cancel</button>
+        <button class="save">Save Task</button>
+      </div>
+    </div>
+  </body>
+</html>

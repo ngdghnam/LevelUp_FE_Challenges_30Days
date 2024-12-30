@@ -1,0 +1,212 @@
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+.form-container {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+.form-container > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+h2 {
+  margin: 0 0 20px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.input-group input[type="text"] {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+}
+.input-group input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #666;
+}
+.input-group .date-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-group .date-input .icon-calendar {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.input-group .date-input .icon-calendar::before {
+  content: "📅";
+  font-size: 1rem;
+  margin-right: 4px;
+}
+.input-group .date-input input[type="text"] {
+  padding-right: 30px; /* Make space for the icon */
+}
+.color-options {
+  display: flex;
+  gap: 5px;
+}
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.color-option.selected {
+  border-color: #fff;
+}
+.color-option.selected::before {
+  content: "✓";
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+.color-option.purple {
+  background-color: #874dff;
+}
+.color-option.green {
+  background-color: #2bff5f;
+}
+.color-option.yellow {
+  background-color: #ffc82f;
+}
+.color-option.pink {
+  background-color: #ff5f7e;
+}
+.assigned-to-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.assigned-user {
+  background-color: #333;
+  border-radius: 5px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+.assigned-user img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 3px;
+}
+.assigned-user span {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.assigned-user span::before {
+  content: "x";
+}
+.priority-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.priority-select {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  text-align: left;
+}
+.priority-select::after {
+  content: "▾";
+  font-size: 1rem;
+  margin-left: auto;
+}
+.priority-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  border-radius: 5px;
+  width: 100%;
+  z-index: 10;
+  display: none;
+}
+.priority-dropdown:hover .priority-options {
+  display: block;
+}
+.priority-option {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.priority-option:hover {
+  background-color: #333;
+}
+.priority-option::before {
+  font-size: 1rem;
+}
+.priority-option.low::before {
+  content: "☁️";
+}
+.priority-option.medium::before {
+  content: "✋";
+}
+.priority-option.high::before {
+  content: "🔥";
+}
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button.cancel {
+  background-color: #333;
+  color: #fff;
+}
+button.save {
+  background-color: #90ee90;
+  color: #000;
+  font-weight: bold;
+}
+.count-indicator {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: gray;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container light-mode">
+      <!-- Add light-mode or dark-mode class -->
+
+      <div class="profile-settings">
+        <div class="profile-header">
+          <h2>Profile</h2>
+          <span class="close-button">X</span>
+        </div>
+        <div class="nav-tabs">
+          <button class="tab-btn active" data-tab="profile-tab">Profile</button>
+          <button class="tab-btn" data-tab="notifications-tab">
+            Notifications
+          </button>
+          <button class="tab-btn" data-tab="appearance-tab">Appearance</button>
+          <button class="tab-btn" data-tab="account-tab">Account</button>
+        </div>
+        <div class="tab-content active" id="profile-tab">
+          <div class="user-details">
+            <p>Share your profile information with others.</p>
+
+            <div class="profile-picture-area">
+              <img
+                src="./song2.jpg"
+                alt="Profile Picture"
+                class="profile-picture"
+              />
+              <div class="profile-button-group">
+                <button class="change-pic-button">Change picture</button>
+                <button class="delete-pic-button">Delete picture</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" value="Kristy" />
+
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" value="Reeves" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" value="kirsty.reeves@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="private-checkbox" class="checkbox-label">
+                <input type="checkbox" id="private-checkbox" checked /> Set as
+                private
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="bio">Bio</label>
+              <textarea
+                id="bio"
+                placeholder="Share some information about you"
+              ></textarea>
+              <span class="char-count"
+                >Characters remaining: <span class="count">200</span></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="notifications-tab"></div>
+
+        <div class="tab-content" id="appearance-tab"></div>
+
+        <div class="tab-content" id="account-tab"></div>
+        <div class="button-area">
+          <button class="cancel-button">Cancel</button>
+          <button class="save-button primary-button">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

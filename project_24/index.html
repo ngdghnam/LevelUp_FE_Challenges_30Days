@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Project 24: Job Movie Tickets</title>
+  </head>
+  <body>
+    <main>
+      <div class="container" id="movieContainer">
+        <!-- Content will be dynamically inserted here -->
+      </div>
+    </main>
+
+    <script>
+      const movieInfo = `
+      <img class="movie-poster" src="./poster2.jpg" alt="" />
+      <div class="movie-info">
+        <h2 class="movie-title">The Lord of the Rings: The Fellowship of the Ring</h2>
+        <div class="movie-meta">
+          <p>Action / Adventure / Drama</p>
+          <span>2h 58m</span>
+        </div>
+        <p class="movie-description">
+          "The Fellowship of the Ring" is the first installment in J.R.R. Tolkien's epic fantasy trilogy, "The Lord of the Rings." The story follows Frodo Baggins, a young hobbit, who inherits a powerful and dangerous ring from his uncle, Bilbo. As it is revealed that this ring holds the key to the dark lord Sauron's return to power, Frodo embarks on a perilous journey to destroy the ring and prevent the impending doom of Middle-earth. Alongside a diverse group of companions, including humans, elves, dwarves, and other hobbits, Frodo faces numerous challenges, battles, and the corruption of the ring's influence. The fellowship's quest unfolds against the backdrop of a richly detailed and immersive fantasy world, showcasing themes of friendship, courage, and the enduring struggle between good and evil.
+        </p>
+        <h3 class="cast-title">Cast</h3>
+        <div class="cast-list">
+          <img class="cast-image" src="./poster.jpg" alt="" />
+          <img class="cast-image" src="./poster.jpg" alt="" />
+          <img class="cast-image" src="./poster.jpg" alt="" />
+        </div>
+        <button class="button primary-button" onclick="showTickets()">Buy Tickets</button>
+      </div>
+    `;
+
+      const ticketsTemplate = `
+      <div class="tickets-container">
+        <div class="tickets-header">
+          <button class="back-button" onclick="showMovieInfo()">←</button>
+          <h2 class="movie-title">Buy tickets</h2>
+        </div>
+        <div class="seats-container">
+          <div class="seats-grid" id="seatsGrid"></div>
+          <div class="legend">
+            <div class="legend-item">
+              <div class="legend-color" style="background: var(--orange)"></div>
+              <span>Selected</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #d1d5db"></div>
+              <span>Reserved</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="border: 1px solid #f9fafb"></div>
+              <span>Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="booking-form">
+        <div class="form-group">
+          <label class="form-label">Date</label>
+          <div class="radio-group">
+            <input type="radio" name="date" id="date1" class="radio-input" value="21 Feb">
+            <label for="date1" class="radio-label">21 Feb</label>
+            <input type="radio" name="date" id="date2" class="radio-input" value="22 Feb" checked>
+            <label for="date2" class="radio-label">22 Feb</label>
+            <input type="radio" name="date" id="date3" class="radio-input" value="23 Feb">
+            <label for="date3" class="radio-label">23 Feb</label>
+            <input type="radio" name="date" id="date4" class="radio-input" value="24 Feb">
+            <label for="date4" class="radio-label">24 Feb</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Time</label>
+          <div class="radio-group">
+            <input type="radio" name="time" id="time1" class="radio-input" value="15:15">
+            <label for="time1" class="radio-label">15:15</label>
+            <input type="radio" name="time" id="time2" class="radio-input" value="17:45">
+            <label for="time2" class="radio-label">17:45</label>
+            <input type="radio" name="time" id="time3" class="radio-input" value="20:35" checked>
+            <label for="time3" class="radio-label">20:35</label>
+            <input type="radio" name="time" id="time4" class="radio-input" value="22:15">
+            <label for="time4" class="radio-label">22:15</label>
+          </div>
+        </div>
+        <button class="button primary-button" onclick="showMovieInfo()">Pay</button>
+      </div>
+    `;
+
+      const container = document.getElementById("movieContainer");
+      const reservedSeats = [1, 8, 9, 16, 29, 30, 31, 34, 35, 44, 45];
+      let selectedSeats = [];
+
+      function showMovieInfo() {
+        container.innerHTML = movieInfo;
+      }
+
+      function showTickets() {
+        container.innerHTML = ticketsTemplate;
+        initializeSeats();
+      }
+
+      function initializeSeats() {
+        const seatsGrid = document.getElementById("seatsGrid");
+        for (let i = 1; i <= 48; i++) {
+          if (![1, 8, 9, 16].includes(i)) {
+            const seat = document.createElement("div");
+            seat.className = `seat${
+              reservedSeats.includes(i) ? " reserved" : ""
+            }`;
+            seat.dataset.id = i;
+            seat.setAttribute("tabindex", "0");
+            seat.addEventListener("click", () => toggleSeat(seat));
+            seat.addEventListener("keypress", (e) => {
+              if (e.key === "Enter") toggleSeat(seat);
+            });
+            seatsGrid.appendChild(seat);
+          } else {
+            seatsGrid.appendChild(document.createElement("div"));
+          }
+        }
+      }
+
+      function toggleSeat(seat) {
+        if (seat.classList.contains("reserved")) return;
+        seat.classList.toggle("selected");
+        const seatId = parseInt(seat.dataset.id);
+        if (selectedSeats.includes(seatId)) {
+          selectedSeats = selectedSeats.filter((id) => id !== seatId);
+        } else {
+          selectedSeats.push(seatId);
+        }
+      }
+
+      // Initialize the app
+      showMovieInfo();
+    </script>
+  </body>
+</html>

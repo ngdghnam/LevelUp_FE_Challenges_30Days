@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+:root {
+  --primary-color: #314256;
+  --text-color: #071232;
+  --orange: #ea580c;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(to right, #f1f8f9 30%, #314256);
+}
+
+@media (min-width: 1024px) {
+  main {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: var(--text-color);
+  max-width: 28rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    min-height: 0;
+  }
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-info {
+  border-radius: 2rem 2rem 0 0;
+  background: white;
+  margin-top: -2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+
+.movie-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.movie-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #263a4a;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
+
+.movie-description {
+  color: #263a4a;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cast-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.cast-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cast-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.button {
+  outline: none;
+  padding: 1rem 1.25rem;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.primary-button {
+  background: #263a4a;
+  color: #f9fafb;
+  margin-top: auto;
+}
+
+.primary-button:hover {
+  background: white;
+  outline: 2px solid #263a4a;
+  color: #1f2937;
+}
+
+.primary-button:focus-visible {
+  outline: 2px solid #263a4a;
+  outline-offset: 2px;
+}
+
+/* Tickets section */
+.tickets-container {
+  color: #f9fafb;
+  background: var(--primary-color);
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+.tickets-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #f9fafb;
+  cursor: pointer;
+}
+
+.seats-container {
+  width: 100%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 6px solid;
+  background: linear-gradient(to bottom, #6181a5, #314256);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+
+.seat {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #f9fafb;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.seat:hover:not(.reserved) {
+  background: rgba(234, 88, 12, 0.7);
+}
+
+.seat.selected {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.seat.reserved {
+  background: #d1d5db;
+  border-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.seat:focus-visible {
+  border-color: var(--orange);
+  outline: none;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+}
+
+.booking-form {
+  background: white;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem;
+  margin-top: -2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  border: 2px solid var(--primary-color);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.radio-input:checked + .radio-label {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.radio-label:focus-within {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.hidden {
+  display: none;
+}

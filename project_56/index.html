@@ -1,113 +1,155 @@
-<!--******************************************************Not Responsive*************************************************************-->
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Timeline Project</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <style></style>
   </head>
-  <body>
-    <header>
-      <u
-        ><h1 style="text-align: center; line-height: 2">Project Timeline</h1></u
-      >
-    </header>
-    <section id="timeline">
-      <article>
-        <div class="inner">
-          <span data-aos="fade-in" class="date">
-            <span class="day">16<sup>th</sup></span>
-            <span class="month">Feb</span>
-            <span class="year">2021</span>
-          </span>
-          <h2 style="left: -80%" data-aos="fade-right">
-            365 Entertainments <small style="color: #c0f8ff">Project1</small>
-          </h2>
-
-          <p style="left: -80%" data-aos="fade-up-right">
-            Design an HTML-CSS frontend template including following modules
-            like header containing navigation links and site logo with embedded
-            CSS properties. Body content or section with movies details sorted
-            and displayed according to genre and footer with copyright info
-          </p>
+  <body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-4">Project Task</h1>
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center space-x-2">
+          <span class="font-semibold">Team</span>
+          <div class="flex -space-x-2">
+            <img
+              class="w-8 h-8 rounded-full border-2 border-white"
+              src="https://placehold.co/100x100"
+              alt="Profile picture of team member"
+            />
+            <img
+              class="w-8 h-8 rounded-full border-2 border-white"
+              src="https://placehold.co/100x100"
+              alt="Profile picture of team member"
+            />
+            <img
+              class="w-8 h-8 rounded-full border-2 border-white"
+              src="https://placehold.co/100x100"
+              alt="Profile picture of team member"
+            />
+            <span
+              class="w-8 h-8 flex items-center justify-center bg-gray-300 rounded-full text-sm font-semibold"
+              >+3</span
+            >
+          </div>
         </div>
-      </article>
-      <article>
-        <div class="inner">
-          <span data-aos="fade-in" class="date">
-            <span class="day">18<sup>th</sup></span>
-            <span class="month">Feb</span>
-            <span class="year">2021</span>
-          </span>
-          <h2 style="left: 75%" data-aos="fade-left">
-            Medium Blogging <small style="color: #c0f8ff">Project2</small>
-          </h2>
-
-          <p style="left: 75%" data-aos="fade-up-left">
-            Design a frontend template similar to any blogging or online
-            publishing platform like Medium. The header may contain navigation
-            links, site logo & search bar. Section should contain properly
-            structured content containing articles and other links. Footer will
-            contain other navigation links and copyright info.
-          </p>
+        <div class="flex items-center space-x-2">
+          <button class="px-2 py-1 rounded bg-gray-200">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="font-semibold">December 2023</span>
+          <button class="px-2 py-1 rounded bg-gray-200">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-      </article>
-      <article>
-        <div class="inner">
-          <span data-aos="fade-in" class="date">
-            <span class="day">21<sup>st</sup></span>
-            <span class="month">Feb</span>
-            <span class="year">2021</span>
-          </span>
-          <h2 style="left: -80%" data-aos="fade-right">
-            CSS3 Animations <small style="color: #c0f8ff">Project3</small>
-          </h2>
-
-          <p style="left: -80%" data-aos="fade-up-right">
-            In this simple project, I’ll be breaking apart some of the popular
-            CSS3 design modules. The goal for this exercise is to start training
-            yourself to think in terms of visual hierarchy, typography, and
-            design principles. My job is to create a website that includes the
-            modules described in the documentation. My final product will look
-            much like the demo website.
-          </p>
-        </div>
-      </article>
-      <article>
-        <div class="inner">
-          <span data-aos="fade-in" class="date">
-            <span class="day">23<sup>rd</sup></span>
-            <span class="month">Feb</span>
-            <span class="year">2021</span>
-          </span>
-          <h2 style="left: 75%" data-aos="fade-left">
-            Voter Registration <small style="color: #c0f8ff">Project4</small>
-          </h2>
-
-          <p style="left: 75%" data-aos="fade-up-left">
-            In this project, I've to rebuild the form6 used by nvsp.in for
-            registering new voters. The page is very straightforward and don’t
-            worry about any of the dynamic functionality on the page or having
-            the form actually submit. The point is to make it look like the real
-            page as much as you reasonably can.
-          </p>
-        </div>
-      </article>
-    </section>
-    <!--**************************************************AOS Data*********************************************************-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        offset: 150,
-        duration: 2500,
-      });
-    </script>
+      </div>
+      <div class="bg-gray-50 rounded-lg overflow-x-auto">
+        <table class="table-fixed w-full">
+          <thead>
+            <tr class="text-center text-gray-500">
+              <th class="w-1/7 py-2">Mon 8</th>
+              <th class="w-1/7 py-2">Tue 9</th>
+              <th
+                class="w-1/7 py-2 bg-blue-100 text-blue-600 font-bold rounded"
+              >
+                Wed 10
+              </th>
+              <th class="w-1/7 py-2">Thu 11</th>
+              <th class="w-1/7 py-2">Fri 12</th>
+              <th class="w-1/7 py-2">Sat 13</th>
+              <th class="w-1/7 py-2">Sun 13</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2" class="relative">
+                <div
+                  class="absolute top-2 left-2 w-2/3 h-10 bg-blue-500 text-white rounded-full flex items-center pl-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full mr-2"
+                    src="https://placehold.co/50x50"
+                    alt="Profile picture of team member"
+                  />
+                  Research and Planning
+                </div>
+              </td>
+              <td rowspan="2" class="relative"></td>
+              <td colspan="2" class="relative">
+                <div
+                  class="absolute top-2 left-2 w-2/3 h-10 bg-green-500 text-white rounded-full flex items-center pl-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full mr-2"
+                    src="https://placehold.co/50x50"
+                    alt="Profile picture of team member"
+                  />
+                  Design user interface
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" class="relative">
+                <div
+                  class="absolute top-2 left-2 w-2/3 h-10 bg-green-600 text-white rounded-full flex items-center pl-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full mr-2"
+                    src="https://placehold.co/50x50"
+                    alt="Profile picture of team member"
+                  />
+                  Create wireframes/mockups
+                </div>
+              </td>
+              <td rowspan="2" colspan="2" class="relative">
+                <div
+                  class="absolute top-2 left-2 w-5/6 h-10 bg-orange-500 text-white rounded-full flex items-center pl-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full mr-2"
+                    src="https://placehold.co/50x50"
+                    alt="Profile picture of team member"
+                  />
+                  Develop test cases
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="1" class="relative">
+                <div
+                  class="absolute top-2 left-2 w-2/3 h-10 bg-blue-600 text-white rounded-full flex items-center pl-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full mr-2"
+                    src="https://placehold.co/50x50"
+                    alt="Profile picture of team member"
+                  />
+                  Define project scope
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="relative">
+                <div
+                  class="absolute top-2 left-2 w-5/6 h-10 bg-orange-400 text-white rounded-full flex items-center pl-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full mr-2"
+                    src="https://placehold.co/50x50"
+                    alt="Profile picture of team member"
+                  />
+                  Conduct integration testing
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
