@@ -1,0 +1,48 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.flight-ticket-container {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #7dd3fc;
+}
+
+.flight-ticket {
+  background-color: white;
+  display: none;
+  padding: 2rem;
+  gap: 1.25rem;
+  align-items: center;
+  min-height: 20rem;
+  max-width: 768px;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .flight-ticket {
+    display: flex;
+  }
+}
+
+.not-supported {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-supported img {
+  width: 270px;
+  height: 420px;
+}
+
+.not-supported h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: -2rem;
+  text-align: center;
+}

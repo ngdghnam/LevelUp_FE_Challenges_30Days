@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Leaderboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="leaderboard">
+      <h1>Leaderboard</h1>
+      <div class="tabs">
+        <ul class="tab-list" role="tablist">
+          <li
+            class="tab active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="today-panel"
+          >
+            Today
+          </li>
+          <li
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="week-panel"
+          >
+            Week
+          </li>
+          <li
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="month-panel"
+          >
+            Month
+          </li>
+          <li
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="year-panel"
+          >
+            Year
+          </li>
+        </ul>
+        <div class="tab-panels">
+          <div id="today-panel" class="tab-panel active" role="tabpanel"></div>
+          <div id="week-panel" class="tab-panel" role="tabpanel"></div>
+          <div id="month-panel" class="tab-panel" role="tabpanel"></div>
+          <div id="year-panel" class="tab-panel" role="tabpanel"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const leaderboards = {
+        today: [
+          { position: 1, name: "Cyber-ZX3", score: 8050, change: "up" },
+          { position: 2, name: "Robo-MK5", score: 7890, change: "down" },
+          { position: 3, name: "Android-77", score: 7750, change: "up" },
+          { position: 4, name: "Nexus-Q8", score: 7620, change: "down" },
+          { position: 5, name: "Mech-X4", score: 7540, change: "none" },
+          { position: 6, name: "AI-V22", score: 7400, change: "up" },
+          { position: 7, name: "Proto-11", score: 7300, change: "up" },
+          { position: 8, name: "Droid-XP10", score: 7250, change: "down" },
+          { position: 9, name: "Cybernet-X1", score: 7150, change: "down" },
+          { position: 10, name: "Techron-66", score: 7050, change: "none" },
+        ],
+        week: [
+          { position: 1, name: "Cyber-ZX3", score: 36050, change: "none" },
+          { position: 2, name: "Robo-MK5", score: 35890, change: "none" },
+          { position: 3, name: "Nexus-Q8", score: 35620, change: "up" },
+          { position: 4, name: "Mech-X4", score: 35400, change: "none" },
+          { position: 5, name: "Android-77", score: 35200, change: "down" },
+          { position: 6, name: "AI-V22", score: 34950, change: "none" },
+          { position: 7, name: "Proto-11", score: 34750, change: "up" },
+          { position: 8, name: "Droid-XP10", score: 34600, change: "down" },
+          { position: 9, name: "Cybernet-X1", score: 34450, change: "none" },
+          { position: 10, name: "Techron-66", score: 34200, change: "up" },
+        ],
+        month: [
+          { position: 1, name: "Cyber-ZX3", score: 132291, change: "none" },
+          { position: 2, name: "Robo-MK5", score: 131032, change: "up" },
+          { position: 3, name: "Nexus-Q8", score: 130011, change: "down" },
+          { position: 4, name: "Mech-X4", score: 120004, change: "up" },
+          { position: 5, name: "Android-77", score: 119921, change: "none" },
+          { position: 6, name: "AI-V22", score: 119817, change: "down" },
+          { position: 7, name: "Proto-11", score: 119754, change: "up" },
+          { position: 8, name: "Droid-XP10", score: 119765, change: "none" },
+          { position: 9, name: "Cybernet-X1", score: 116500, change: "down" },
+          { position: 10, name: "Techron-66", score: 116000, change: "none" },
+        ],
+        year: [
+          { position: 1, name: "Cyber-ZX3", score: 502021, change: "up" },
+          { position: 2, name: "Robo-MK5", score: 500015, change: "down" },
+          { position: 3, name: "Nexus-Q8", score: 499980, change: "up" },
+          { position: 4, name: "Mech-X4", score: 490950, change: "none" },
+          { position: 5, name: "Android-77", score: 490900, change: "down" },
+          { position: 6, name: "AI-V22", score: 489850, change: "up" },
+          { position: 7, name: "Proto-11", score: 489800, change: "up" },
+          { position: 8, name: "Droid-XP10", score: 489750, change: "down" },
+          { position: 9, name: "Cybernet-X1", score: 485000, change: "none" },
+          { position: 10, name: "Techron-66", score: 480000, change: "none" },
+        ],
+      };
+
+      function getChangeIcon(change) {
+        switch (change) {
+          case "up":
+            return "↑";
+          case "down":
+            return "↓";
+          default:
+            return "–";
+        }
+      }
+
+      function createPodium(topThree) {
+        const podiumSizes = {
+          1: { avatar: 90, bar: "9rem" },
+          2: { avatar: 80, bar: "7rem" },
+          3: { avatar: 70, bar: "6rem" },
+        };
+
+        return `
+                <div class="podium">
+                    <div class="podium-grid">
+                        ${[2, 1, 3]
+                          .map((position) => {
+                            const user = topThree[position - 1];
+                            const sizes = podiumSizes[position];
+                            return `
+                                <div class="podium-position">
+                                    ${
+                                      position === 1
+                                        ? '<span class="crown">👑</span>'
+                                        : position
+                                    }
+                                    <span class="position-change ${
+                                      user.change
+                                    }">${getChangeIcon(user.change)}</span>
+                                    <img 
+                                        class="avatar" 
+                                        style="width: ${
+                                          sizes.avatar
+                                        }px; height: ${sizes.avatar}px;"
+                                        src="https://robohash.org/${user.name}" 
+                                        alt="${user.name}"
+                                    >
+                                    <div class="podium-bar" style="height: ${
+                                      sizes.bar
+                                    }">
+                                        <span class="name">${user.name}</span>
+                                        <span class="score">${user.score}</span>
+                                    </div>
+                                </div>
+                            `;
+                          })
+                          .join("")}
+                    </div>
+                </div>
+            `;
+      }
+
+      function createRankings(rankings) {
+        return `
+                <ol class="rankings">
+                    ${rankings
+                      .slice(3)
+                      .map(
+                        (user) => `
+                        <li class="ranking-item">
+                            <div class="ranking-position">
+                                ${user.position}
+                                <span class="position-change ${
+                                  user.change
+                                }">${getChangeIcon(user.change)}</span>
+                            </div>
+                            <img 
+                                class="ranking-avatar"
+                                src="https://robohash.org/${user.name}" 
+                                alt="${user.name}"
+                            >
+                            <span>${user.name}</span>
+                            <span class="ranking-score">${user.score}</span>
+                        </li>
+                    `
+                      )
+                      .join("")}
+                </ol>
+            `;
+      }
+
+      function renderLeaderboard(period) {
+        const rankings = leaderboards[period];
+        const panel = document.getElementById(`${period}-panel`);
+        panel.innerHTML =
+          createPodium(rankings.slice(0, 3)) + createRankings(rankings);
+      }
+
+      // Initialize tabs
+      const tabs = document.querySelectorAll(".tab");
+      const panels = document.querySelectorAll(".tab-panel");
+      const periods = ["today", "week", "month", "year"];
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          // Update tab states
+          tabs.forEach((t) => {
+            t.classList.remove("active");
+            t.setAttribute("aria-selected", "false");
+          });
+          tab.classList.add("active");
+          tab.setAttribute("aria-selected", "true");
+
+          // Update panel visibility
+          panels.forEach((p) => p.classList.remove("active"));
+          panels[index].classList.add("active");
+
+          // Render content if needed
+          const period = periods[index];
+          if (!panels[index].innerHTML) {
+            renderLeaderboard(period);
+          }
+        });
+      });
+
+      // Initialize first tab
+      renderLeaderboard("today");
+    </script>
+  </body>
+</html>

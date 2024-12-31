@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #315eb9;
+  font-family: "Fredoka", sans-serif;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 20rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 22.5rem;
+  padding: 1rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.chart-header > div {
+  display: flex;
+  flex-direction: column;
+}
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.chart-subtitle {
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ghost-button {
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0.25rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.ghost-button:hover {
+  background-color: #f2f2f2;
+}
+.ghost-button i {
+  font-size: 1.5rem;
+}
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.progress-circle {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-track {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-track .progress-center {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.storage-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+.legend-color {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+}
+
+.buy-more-button {
+  background-color: #3246fd;
+  border-radius: 0.25rem;
+  color: #f9f9f9;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.buy-more-button:hover {
+  transform: scale(1.05);
+}
+
+.stacked-chart {
+  display: flex;
+  flex-direction: column;
+}
+.chart-month {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.chart-month-item {
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.5rem;
+}
+.active-month {
+  background-color: #f1f1f1;
+}
+.chart-columns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 1.25rem;
+  gap: 1rem;
+  height: 8rem;
+}
+.chart-column-group {
+  display: flex;
+}
+.chart-column {
+  width: 1.25rem;
+  height: 100%;
+}
+.top-column {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.bottom-column {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+}
+.chart-description {
+  opacity: 0.7;
+  margin-top: auto;
+  font-size: 0.875rem;
+}
+.vertical-chart {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chart-bars {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 2rem;
+  height: 9rem;
+}
+.chart-bar {
+  width: 0.5rem;
+  border-radius: 9999px;
+  height: 100%;
+}
+.vertical-chart2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.chart-bars-2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-top: 1rem;
+  height: 8rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+.chart-bar-group {
+  position: relative;
+}
+.chart-bar-2 {
+  position: absolute;
+  width: 0.125rem;
+  border-radius: 9999px;
+}

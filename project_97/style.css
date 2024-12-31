@@ -1,0 +1,104 @@
+body {
+  font-family: "Fredoka", sans-serif;
+  background-color: #f7f7f7;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.6;
+  font-size: 1.125rem;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+
+.nav-link.selected {
+  opacity: 1;
+  background-color: #dbdaf9;
+}
+
+.radio-btn {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 9999px;
+}
+
+.radio-btn.selected {
+  background-color: #ededf9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.radio-btn.rounded {
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+.radio-btn:not(.rounded) {
+  padding: 0.25rem 0.75rem;
+}
+
+.asset-card {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+.asset-card .overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.asset-card:hover .overlay {
+  display: flex;
+}
+
+.action-btn {
+  border: 2px solid white;
+  border-radius: 9999px;
+  padding: 0.25rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+  opacity: 1;
+}
+
+.select-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  min-width: 150px;
+}
+
+.select-container:focus-within .select-dropdown {
+  display: block;
+}
+
+.select-option {
+  padding: 0.25rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.select-option:hover {
+  background-color: #dbdaf9;
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charts Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card-content">
+          <div class="storage-chart">
+            <header class="chart-header">
+              <button class="ghost-button">
+                <i class="material-icons">arrow_back</i>
+              </button>
+              <button class="ghost-button">
+                <i class="material-icons">more_vert</i>
+              </button>
+            </header>
+            <div class="progress-bar">
+              <div class="progress-circle">
+                <div
+                  class="progress-track"
+                  style="
+                    background: conic-gradient(
+                      #b137fd 0%,
+                      #3246fd 70%,
+                      #eeeeee 70%,
+                      #eeeeee 100%
+                    );
+                  "
+                >
+                  <div class="progress-center">
+                    <span class="progress-text">70%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="chart-title">My Storage</h2>
+            <footer class="chart-footer">
+              <div class="storage-legend">
+                <div class="legend-item">
+                  <div
+                    class="legend-color"
+                    style="background-color: #3246fd"
+                  ></div>
+                  <span>Used</span>
+                </div>
+                <div class="legend-item">
+                  <div
+                    class="legend-color"
+                    style="background-color: #eeeeee"
+                  ></div>
+                  <span>Total space</span>
+                </div>
+              </div>
+              <button class="buy-more-button">BUY MORE</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="stacked-chart">
+            <h2 class="chart-title">Stacked column chart</h2>
+            <div class="chart-month">
+              <span class="chart-month-item">Nov</span>
+              <span class="chart-month-item active-month">Dec</span>
+              <span class="chart-month-item">Jan</span>
+              <span class="chart-month-item">Feb</span>
+              <span class="chart-month-item">Mar</span>
+              <span class="chart-month-item">Apr</span>
+            </div>
+            <div class="chart-columns">
+              <div class="chart-column-group">
+                <div
+                  class="chart-column top-column"
+                  style="background-color: #b739ff"
+                ></div>
+                <div
+                  class="chart-column bottom-column"
+                  style="background-color: #fec52e"
+                ></div>
+              </div>
+              <div class="chart-column-group">
+                <div
+                  class="chart-column top-column"
+                  style="background-color: #b739ff; height: 75%"
+                ></div>
+                <div
+                  class="chart-column bottom-column"
+                  style="background-color: #fec52e; height: 75%"
+                ></div>
+              </div>
+              <div class="chart-column-group">
+                <div
+                  class="chart-column top-column"
+                  style="background-color: #b739ff; height: 50%"
+                ></div>
+                <div
+                  class="chart-column bottom-column"
+                  style="background-color: #fec52e; height: 50%"
+                ></div>
+              </div>
+              <div class="chart-column-group">
+                <div
+                  class="chart-column top-column"
+                  style="background-color: #b739ff; height: 90%"
+                ></div>
+                <div
+                  class="chart-column bottom-column"
+                  style="background-color: #fec52e; height: 90%"
+                ></div>
+              </div>
+              <div class="chart-column-group">
+                <div
+                  class="chart-column top-column"
+                  style="background-color: #b739ff; height: 30%"
+                ></div>
+                <div
+                  class="chart-column bottom-column"
+                  style="background-color: #fec52e; height: 30%"
+                ></div>
+              </div>
+            </div>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div
+                  class="legend-color"
+                  style="background-color: #fec52e"
+                ></div>
+                <span>Apple</span>
+              </div>
+              <div class="legend-item">
+                <div
+                  class="legend-color"
+                  style="background-color: #b739ff"
+                ></div>
+                <span>Banana</span>
+              </div>
+            </div>
+            <p class="chart-description">
+              Give that wolf a banana, give that wolf And before that wolf eats
+              my grandma.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="vertical-chart">
+            <header class="chart-header">
+              <h2 class="chart-title">854</h2>
+              <h3 class="chart-subtitle">
+                <i class="material-icons">arrow_upward</i> 25 upward
+              </h3>
+              <button class="ghost-button">
+                <i class="material-icons">more_vert</i>
+              </button>
+            </header>
+            <div class="chart-bars">
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 40%,
+                    #61960a 40%
+                  );
+                "
+              ></div>
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 75%,
+                    #61960a 75%
+                  );
+                "
+              ></div>
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 20%,
+                    #61960a 20%
+                  );
+                "
+              ></div>
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 40%,
+                    #61960a 40%
+                  );
+                "
+              ></div>
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 30%,
+                    #61960a 30%
+                  );
+                "
+              ></div>
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 20%,
+                    #61960a 20%
+                  );
+                "
+              ></div>
+              <div
+                class="chart-bar"
+                style="
+                  background: linear-gradient(
+                    to bottom,
+                    #e9edf8 60%,
+                    #61960a 60%
+                  );
+                "
+              ></div>
+            </div>
+            <h2 class="chart-title">Verticalbar</h2>
+            <p class="chart-description">
+              Everybody at the bar gettin' tipsy, at the bar gettin' tipsy...
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="vertical-chart2">
+            <header class="chart-header">
+              <div>
+                <h2 class="chart-title">Verticalbar</h2>
+                <h3 class="chart-subtitle">Statistics of the month</h3>
+              </div>
+              <button class="ghost-button">
+                <i class="material-icons">more_vert</i>
+              </button>
+            </header>
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div
+                  class="legend-color"
+                  style="background-color: #2749fe"
+                ></div>
+                <span>Data one</span>
+              </div>
+              <div class="legend-item">
+                <div
+                  class="legend-color"
+                  style="background-color: #ff3a99"
+                ></div>
+                <span>Data two</span>
+              </div>
+            </div>
+            <div class="chart-bars chart-bars-2">
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 100%;
+                    bottom: -15%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 85%,
+                      #ff3a99 85%
+                    );
+                  "
+                ></div>
+              </div>
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 50%;
+                    bottom: -30%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 40%,
+                      #ff3a99 40%
+                    );
+                  "
+                ></div>
+              </div>
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 90%;
+                    bottom: -18%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 80%,
+                      #ff3a99 80%
+                    );
+                  "
+                ></div>
+              </div>
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 70%;
+                    bottom: -27%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 60%,
+                      #ff3a99 60%
+                    );
+                  "
+                ></div>
+              </div>
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 90%;
+                    bottom: -49%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 45%,
+                      #ff3a99 45%
+                    );
+                  "
+                ></div>
+              </div>
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 90%;
+                    bottom: -40%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 55%,
+                      #ff3a99 55%
+                    );
+                  "
+                ></div>
+              </div>
+              <div class="chart-bar-group">
+                <div
+                  class="chart-bar-2"
+                  style="
+                    height: 90%;
+                    bottom: -31%;
+                    background: linear-gradient(
+                      to bottom,
+                      #274afe 65%,
+                      #ff3a99 65%
+                    );
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

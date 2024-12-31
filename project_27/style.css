@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #a3e635, #84cc16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaderboard {
+  background-color: #09090b;
+  color: #fafafa;
+  border-radius: 1.5rem;
+  padding-top: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  max-width: 24rem;
+  width: 100%;
+}
+
+.leaderboard h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.tab {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.1s;
+  outline: none;
+}
+
+.tab:hover {
+  background-color: #27272a;
+}
+
+.tab.active {
+  background-color: #52525b;
+  cursor: default;
+}
+
+.tab:focus-visible {
+  outline: 1px solid #84cc16;
+  outline-offset: 1px;
+}
+
+.podium {
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.podium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.podium-position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.crown {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.position-change {
+  font-size: 1.5rem;
+  margin-top: -0.25rem;
+}
+
+.up {
+  color: #84cc16;
+}
+.down {
+  color: #ef4444;
+}
+.none {
+  color: #e5e5e5;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 9999px;
+  border: 2px solid #84cc16;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75), 0 0 10px 2px #84cc16;
+}
+
+.podium-bar {
+  background-color: #84cc16;
+  margin-top: 1rem;
+  color: #09090b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 0.75rem 0.75rem 0 0;
+  padding: 0.75rem 0.5rem;
+}
+
+.podium-bar .name {
+  font-weight: 500;
+}
+
+.podium-bar .score {
+  font-weight: 600;
+}
+
+.rankings {
+  max-height: 14rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.rankings::-webkit-scrollbar {
+  display: none;
+}
+
+.ranking-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.25rem 2rem;
+  margin: 0 -1rem;
+}
+
+.ranking-item:nth-child(odd) {
+  background-color: #3f3f46;
+}
+
+.ranking-item:nth-child(even) {
+  background-color: #09090b;
+}
+
+.ranking-position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid #ffffff;
+}
+
+.ranking-score {
+  margin-left: auto;
+  color: #84cc16;
+  font-weight: 500;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
